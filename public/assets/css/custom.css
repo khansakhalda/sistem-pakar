@@ -1,0 +1,188 @@
+/* Dropdown CSS Styles */
+.checkbox-dropdown {
+    border-radius: 8 8 0 0;
+
+    border: 1px solid #aaa;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.checkbox-dropdown:after {
+    content: "";
+
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+}
+
+.checkbox-dropdown.is-active:after {
+    border-bottom-color: #000;
+    border-top-color: #fff;
+}
+
+.checkbox-dropdown-list {
+    z-index: 9999;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    border: inherit;
+    border-top: none;
+    left: -1px;
+    right: -1px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none;
+}
+
+.is-active .checkbox-dropdown-list {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.checkbox-dropdown-list li label {
+    display: block;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: #555;
+    color: white;
+}
+
+.checkbox-dropdown-list li label:has(input:checked) {
+    background-color: #555;
+    color: white;
+}
+
+.checkbox-dropdown-list li:not(:first-child) {
+    margin-top: -8px;
+}
+.save-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Menetapkan z-index ke 9999 */
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+#cf > option:nth-child(1),
+#cf2 > option:nth-child(1) {
+    color: #03993c;
+}
+#cf > option:nth-child(2),
+#cf2 > option:nth-child(2) {
+    color: rgb(4, 0, 238);
+}
+#cf option:nth-child(3),
+#cf2 > option:nth-child(3) {
+    color: rgb(230, 0, 161);
+}
+#cf option:nth-child(4),
+#cf2 option:nth-child(4) {
+    color: rgb(255, 94, 0);
+}
+#cf > option:nth-child(5),
+#cf2 > option:nth-child(5) {
+    color: rgb(255, 0, 0);
+}
+#cf > option:nth-child(6),
+#cf2 > option:nth-child(6) {
+    color: rgb(172, 0, 0);
+}
+
+.cf3 > option:nth-child(2) {
+    color: #00db2c;
+}
+.cf3 > option:nth-child(3) {
+    color: #7ce62a;
+}
+.cf3 > option:nth-child(4) {
+    color: #f8c600;
+}
+.cf3 > option:nth-child(5) {
+    color: #faaf15;
+}
+.cf3 > option:nth-child(6) {
+    color: #fd910b;
+}
+.cf3 > option:nth-child(7) {
+    color: #ff7300;
+}
+.cf3 > option:nth-child(8) {
+    color: #fa4d00;
+}
+.cf3 > option:nth-child(9) {
+    color: #f52600;
+}
+.cf3 > option:nth-child(10) {
+    color: #f00000;
+}
+
+/* .cf3 > option {
+    background: #444444;
+} */
+/* Define gradient */
+.cf3 {
+    background-image: linear-gradient(
+        to right,
+        #1b1b1b,
+        #494949
+    ); /* Contoh gradient dari oranye ke merah */
+    border: 1px solid #ccc; /* Atur border sesuai kebutuhan */
+    color: white; /* Atur warna teks sesuai kebutuhan */
+    padding: 5px; /* Atur padding sesuai kebutuhan */
+    border-radius: 5px; /* Atur border-radius sesuai kebutuhan */
+    appearance: none; /* Hapus default styling browser */
+}
+
+/* Apply gradient overlay */
+.cf3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+        to right,
+        #1b1b1b,
+        #494949
+    ); /* Sama dengan gradient di atas */
+    pointer-events: none; /* Mencegah overlay dari mengganggu interaksi pengguna */
+    opacity: 0.3; /* Sesuaikan opasitas sesuai kebutuhan */
+}
+
+.cf3 > option {
+    background: #1b1b1b;
+}
+
+.btn-diagnosis {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

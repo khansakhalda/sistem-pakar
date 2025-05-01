@@ -1,0 +1,1058 @@
+[
+    {
+        "rumah sakit": [
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "RSIA CITRA KELUARGA",
+                "alamat": "JL URIP SUMOHARJO NO. 189",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSIA+CITRA+KELUARGA+JL+URIP+SUMOHARJO+NO.+189"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "RSU TNI AD TK. IV",
+                "alamat": "JL MAYJEN SUNGKONO 44 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSU+TNI+AD+TK.+IV+JL+MAYJEN+SUNGKONO+44+KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "RS BHAYANGKARA KEDIRI",
+                "alamat": "JL KOMBESPOL DURYAT 17 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RS+BHAYANGKARA+KEDIRI+JL+KOMBESPOL+DURYAT+17+KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "RS DAHA HUSADA",
+                "alamat": "JL. VETERAN 48 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RS+DAHA+HUSADA+JL.+VETERAN+48+KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "RATIH (JST)",
+                "alamat": "JL PENANGGUNGAN 32 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RATIH+(JST)+JL+PENANGGUNGAN+32+KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "RSM AHMAD DAHLAN",
+                "alamat": "JL GATOT SUBROTO 84 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSM+AHMAD+DAHLAN+JL+GATOT+SUBROTO+84+KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "RSU LIRBOYO",
+                "alamat": "Jl. dr Sahardjo",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSU+LIRBOYO+Jl.+dr+Sahardjo"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "RSIA NIRMALA KEDIRI",
+                "alamat": "JL. Jaksa Agung Suprapto NO 5",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSIA+NIRMALA+KEDIRI+JL.+Jaksa+Agung+Suprapto+NO+5"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "RS BAPTIS",
+                "alamat": "JL.BRIGJEN POL IBH PRANOTO 1-7",
+                "url": "https://www.google.com/maps/search/?api=1&query=RS+BAPTIS+JL.BRIGJEN+POL+IBH+PRANOTO+1-7"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "RSUD GAMBIRAN",
+                "alamat": "JL. KAPTEN TENDEAN NO. 16 KEL",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSUD+GAMBIRAN+JL.+KAPTEN+TENDEAN+NO.+16+KEL"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "RSM SITI KHODIJAH",
+                "alamat": "JL DR SOETOMO 322 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSM+SITI+KHODIJAH+JL+DR+SOETOMO+322+KAB+KEDIRI"
+            },
+            {
+                "Kecamatan": "KANDAT",
+                "nama": "RSM SURYA MELATI",
+                "alamat": "JL RAYA NGADILUWIH-WATES KM 10",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSM+SURYA+MELATI+JL+RAYA+NGADILUWIH-WATES+KM+10"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "RSU WILUJENG",
+                "alamat": "JL. JOYOBOYO NO 4",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSU+WILUJENG+JL.+JOYOBOYO+NO+4"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "ARGA HUSADA (JST)",
+                "alamat": "NGADILUWIH KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=ARGA+HUSADA+(JST)+NGADILUWIH+KAB+KEDIRI"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "AURA SYIFA",
+                "alamat": "JL. JOYOBOYO 42 NGASEM KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=AURA+SYIFA+JL.+JOYOBOYO+42+NGASEM+KEDIRI"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "RSUD SIMPANG LIMA GUMUL KEDIRI",
+                "alamat": "Jl. Galuh Candra Kirana",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSUD+SIMPANG+LIMA+GUMUL+KEDIRI+Jl.+Galuh+Candra+Kirana"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "HVA TOELOENGREDJO (JST)",
+                "alamat": "JL A YANI 25 PARE KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=HVA+TOELOENGREDJO+(JST)+JL+A+YANI+25+PARE+KAB+KEDIRI"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "RS AMELIA",
+                "alamat": "JL. PAHLAWAN 25A PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=RS+AMELIA+JL.+PAHLAWAN+25A+PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "RSUD KAB. KEDIRI",
+                "alamat": "JL.PK. BANGSA NO.1 PARE KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=RSUD+KAB.+KEDIRI+JL.PK.+BANGSA+NO.1+PARE+KEDIRI"
+            }
+        ]
+    },
+    {
+        "dokter umum": [
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "SM. HARIJANTO, DR",
+                "alamat": "JL KYAI MOJO NO 6 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=SM.%20HARIJANTO,%20DR,%20JL%20KYAI%20MOJO%20NO%206%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "ADI SURIJA, DR",
+                "alamat": "JL.DR.SUTOMO NO.11, BANJARAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=ADI%20SURIJA,%20DR,%20JL.DR.SUTOMO%20NO.11,%20BANJARAN"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "TRISMARJADI, DR",
+                "alamat": "JL DHOHO NO 84 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=TRISMARJADI,%20DR,%20JL%20DHOHO%20NO%2084%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "MUSTADHIM, DR",
+                "alamat": "JL SERSAN SUHARMAJI 148 B KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=MUSTADHIM,%20DR,%20JL%20SERSAN%20SUHARMAJI%20148%20B%20KDR"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "dr. INGE IGNASIA I ( PT KAI )",
+                "alamat": "JL STASIUN NO. 2 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20INGE%20IGNASIA%20I%20(PT%20KAI),%20JL%20STASIUN%20NO.%202%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "DWI WINARNI,DR",
+                "alamat": "JL. KUWAK UTARA 25 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=DWI%20WINARNI,%20DR,%20JL.%20KUWAK%20UTARA%2025%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "TEGAR FADELI, DR",
+                "alamat": "JL GUNUNG AGUNG",
+                "url": "https://www.google.com/maps/search/?api=1&query=TEGAR%20FADELI,%20DR,%20JL%20GUNUNG%20AGUNG"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "HADY WARDANA, DR",
+                "alamat": "JL DR SAHARJO NO 6 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=HADY%20WARDANA,%20DR,%20JL%20DR%20SAHARJO%20NO%206%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "dr. HENRY MULYONO (JST)",
+                "alamat": "JL GATOT SUBROTO 79 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20HENRY%20MULYONO%20(JST),%20JL%20GATOT%20SUBROTO%2079%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "dr. ADI LAKSONO",
+                "alamat": "JL DR SAHARJO 233 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ADI%20LAKSONO,%20JL%20DR%20SAHARJO%20233%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "dr. AGUS SULISTIAWAN",
+                "alamat": "JL KH AGUS SALIM 83 A KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20AGUS%20SULISTIAWAN,%20JL%20KH%20AGUS%20SALIM%2083%20A%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "BAMBANG DJATMIKO DR",
+                "alamat": "JL WILIS MULYA NO.08 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BAMBANG%20DJATMIKO%20DR,%20JL%20WILIS%20MULYA%20NO.08%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "LIANAWATI,DR",
+                "alamat": "VILLA BULUREJO J-01 BLABAK",
+                "url": "https://www.google.com/maps/search/?api=1&query=LIANAWATI,%20DR,%20VILLA%20BULUREJO%20J-01%20BLABAK"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "dr. YOKE RETNANINGPURI",
+                "alamat": "JL BRIGJEN POL IMAM BACHRI 238",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20YOKE%20RETNANINGPURI,%20JL%20BRIGJEN%20POL%20IMAM%20BACHRI%20238"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "FATHIYAH ROHMAH, DR",
+                "alamat": "JL. MAUNI I/ 147 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=FATHIYAH%20ROHMAH,%20DR,%20JL.%20MAUNI%20I/%20147%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "DWI NUGERAHINI,DR",
+                "alamat": "JL. CENDANA 97  KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=DWI%20NUGERAHINI,%20DR,%20JL.%20CENDANA%2097%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "JOPIE, DR",
+                "alamat": "JL.KAPTEN PIERE TENDEAN NO.55 1",
+                "url": "https://www.google.com/maps/search/?api=1&query=JOPIE,%20DR,%20JL.KAPTEN%20PIERE%20TENDEAN%20NO.55%201"
+            },
+            {
+                "Kecamatan": "BADAS",
+                "nama": "dr. ARIESTA DWI KURNIASARI",
+                "alamat": "JL VETERAN SEKOTO BADAS KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ARIESTA%20DWI%20KURNIASARI,%20JL%20VETERAN%20SEKOTO%20BADAS%20KDR"
+            },
+            {
+                "Kecamatan": "BADAS",
+                "nama": "dr. HENNY",
+                "alamat": "JL. CENDANA NO 101",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20HENNY,%20JL.%20CENDANA%20NO%20101"
+            },
+            {
+                "Kecamatan": "BANYAKAN",
+                "nama": "GA.DARMAWAN,DR",
+                "alamat": "DESA MARON - KEC.BANYAKAN - K",
+                "url": "https://www.google.com/maps/search/?api=1&query=GA.DARMAWAN,DR,%20DESA%20MARON%20-%20KEC.BANYAKAN%20-%20K"
+            },
+            {
+                "Kecamatan": "GAMPENGREJO",
+                "nama": "SAMSUL HADI, DR",
+                "alamat": "JL RAYA GAMPENGREJO 139 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=SAMSUL%20HADI,%20DR,%20JL%20RAYA%20GAMPENGREJO%20139%20KEDIRI"
+            },
+            {
+                "Kecamatan": "GROGOL",
+                "nama": "SRI MUNTAMAH,DR",
+                "alamat": "JL.RAYA WONOASRI 57 GROGOL",
+                "url": "https://www.google.com/maps/search/?api=1&query=SRI%20MUNTAMAH,DR,%20JL.RAYA%20WONOASRI%2057%20GROGOL"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "dr. A.NUGROHO PUDJI L",
+                "alamat": "JL WAHIDIN SH GURAH KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20A.NUGROHO%20PUDJI%20L,%20JL%20WAHIDIN%20SH%20GURAH%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "AGUNG WIBOWO, DR",
+                "alamat": "DS TIRUKIDUL KEC GURAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=AGUNG%20WIBOWO,%20DR,%20DS%20TIRUKIDUL%20KEC%20GURAH"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "DR. YUDIONO SETIAWAN",
+                "alamat": "JL. PEMUDA NO.35",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20YUDIONO%20SETIAWAN,%20JL.%20PEMUDA%20NO.35"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "DR. RINI HIDAYAT",
+                "alamat": "PERUMAHAN RAYACITRA HARMONY A-",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20RINI%20HIDAYAT,%20PERUMAHAN%20RAYACITRA%20HARMONY%20A-"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "DR. FRANSISKA DWI ANGGRENY",
+                "alamat": "JL. LAPANGAN NO.69",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20FRANSISKA%20DWI%20ANGGRENY,%20JL.%20LAPANGAN%20NO.69"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "DJATMIKO LW,DR",
+                "alamat": "JL.PEMUDA NO.61 GURAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=DJATMIKO%20LW,DR,%20JL.PEMUDA%20NO.61%20GURAH"
+            },
+            {
+                "Kecamatan": "KANDANGAN",
+                "nama": "dr. LINDA TJAHJONO",
+                "alamat": "JL KELUD 137 KANDANGAN KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20LINDA%20TJAHJONO,%20JL%20KELUD%20137%20KANDANGAN%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "KANDANGAN",
+                "nama": "DR. DWI WALUYO",
+                "alamat": "PURI INDAH KEBONDALEM BLOK C -",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20DWI%20WALUYO,%20PURI%20INDAH%20KEBONDALEM%20BLOK%20C%20-"
+            },
+            {
+                "Kecamatan": "KANDAT",
+                "nama": "dr. IKA TJANDRA KUSUMA",
+                "alamat": "JL RAYA TEGALAN 15 KANDAT KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20IKA%20TJANDRA%20KUSUMA,%20JL%20RAYA%20TEGALAN%2015%20KANDAT%20KDR"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "RHAMA KURNIAWAN, DR",
+                "alamat": "JL JOYOBOYO 4 PADANGAN KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=RHAMA%20KURNIAWAN,%20DR,%20JL%20JOYOBOYO%204%20PADANGAN%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "DR. ARIN ISTIANI",
+                "alamat": "JL.NUSA INDAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20ARIN%20ISTIANI,%20JL.NUSA%20INDAH"
+            },
+            {
+                "Kecamatan": "KRAS",
+                "nama": "AHMAD AFANDI, DR",
+                "alamat": "JL. NASIONAL 22DUSUN JARAKAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=AHMAD%20AFANDI,%20DR,%20JL.%20NASIONAL%2022DUSUN%20JARAKAN"
+            },
+            {
+                "Kecamatan": "KUNJANG",
+                "nama": "dr. DUROTUN NAFISA",
+                "alamat": "JL RAYA BADAS KUNJANG KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20DUROTUN%20NAFISA,%20JL%20RAYA%20BADAS%20KUNJANG%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "MOJO",
+                "nama": "H. IRADAT SOERJONO, DR.",
+                "alamat": "JL. RAYA MOJO 3 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=H.%20IRADAT%20SOERJONO,%20DR.,%20JL.%20RAYA%20MOJO%203%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "dr. ESTER HANA MATOFANI",
+                "alamat": "DS SEKETI NGADILUWIH KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ESTER%20HANA%20MATOFANI,%20DS%20SEKETI%20NGADILUWIH%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "dr. G. ERNAWAN SUKMA ANGGARA",
+                "alamat": "JENGGOLO INDAH II /B 2",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20G.%20ERNAWAN%20SUKMA%20ANGGARA,%20JENGGOLO%20INDAH%20II%20/B%202"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "dr. ACE TOLAU SANSAIL",
+                "alamat": "JL SUKARNO HATTA 2 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ACE%20TOLAU%20SANSAIL,%20JL%20SUKARNO%20HATTA%202%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "JESSI SURYANI SETIAWAN, DR",
+                "alamat": "JL ANGGREK RAYA DS NAMBAAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=JESSI%20SURYANI%20SETIAWAN,%20DR,%20JL%20ANGGREK%20RAYA%20DS%20NAMBAAN"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "RAHMA SARI DEWI, DR",
+                "alamat": "JL DANDANG GENDIS DS DOKO",
+                "url": "https://www.google.com/maps/search/?api=1&query=RAHMA%20SARI%20DEWI,%20DR,%20JL%20DANDANG%20GENDIS%20DS%20DOKO"
+            },
+            {
+                "Kecamatan": "PAGU",
+                "nama": "dr. ADIP KUSWORO (JST)",
+                "alamat": "JL JOYOBOYO 190, PAGU",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ADIP%20KUSWORO%20(JST),%20JL%20JOYOBOYO%20190,%20PAGU"
+            },
+            {
+                "Kecamatan": "PAGU",
+                "nama": "UPIK MARIJATI, DR",
+                "alamat": "DS.MENANG PAGU KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=UPIK%20MARIJATI,%20DR,%20DS.MENANG%20PAGU%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PAPAR",
+                "nama": "dr. MELANY PILATUSALIM",
+                "alamat": "JL RAYA MINGGIRAN 56 B PAPAR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20MELANY%20PILATUSALIM,%20JL%20RAYA%20MINGGIRAN%2056%20B%20PAPAR"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "CHAIRINA ROSARI, DR",
+                "alamat": "JL. ARGOPURO 6-7 PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=CHAIRINA%20ROSARI,%20DR,%20JL.%20ARGOPURO%206-7%20PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "AGUS SUKISNO, DR.",
+                "alamat": "JL. DR SUTOMO 4E, PELEM, PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=AGUS%20SUKISNO,%20DR.,%20JL.%20DR%20SUTOMO%204E,%20PELEM,%20PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "dr. SRI WAHYUNI INDRAYANTI",
+                "alamat": "JL TEUKU UMAR 121 PARE KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20SRI%20WAHYUNI%20INDRAYANTI,%20JL%20TEUKU%20UMAR%20121%20PARE%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "SRI ARIFAH, DR",
+                "alamat": "JL. LETJEN SUTOYO 26 PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=SRI%20ARIFAH,%20DR,%20JL.%20LETJEN%20SUTOYO%2026%20PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "BENY. SJ, DR",
+                "alamat": "JL SUPRYADI 56 GEDANGSEWU PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=BENY.%20SJ,%20DR,%20JL%20SUPRYADI%2056%20GEDANGSEWU%20PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "DIDIN SUDIANA, DR",
+                "alamat": "JL COKROAMINOTO 32 PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=DIDIN%20SUDIANA,%20DR,%20JL%20COKROAMINOTO%2032%20PARE"
+            },
+            {
+                "Kecamatan": "PLEMAHAN",
+                "nama": "MOH ALI MASHAR DR",
+                "alamat": "JL KARTINI 47 PLEMAHAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=MOH%20ALI%20MASHAR%20DR,%20JL%20KARTINI%2047%20PLEMAHAN"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "dr. RAHMAD SANTOSO (JST)",
+                "alamat": "JL RAYA BRENGGOLO 206 KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20RAHMAD%20SANTOSO%20(JST),%20JL%20RAYA%20BRENGGOLO%20206%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "DR. NANANG MUHIBUDDIN",
+                "alamat": "JL RAYA BRENGGOLO PLOSOKLATEN",
+                "url": "https://www.google.com/maps/search/?api=1&query=DR.%20NANANG%20MUHIBUDDIN,%20JL%20RAYA%20BRENGGOLO%20PLOSOKLATEN"
+            },
+            {
+                "Kecamatan": "PUNCU",
+                "nama": "dr. AHMAD KHOTIB",
+                "alamat": "JL DIPONEGORO 3 PUNCU KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20AHMAD%20KHOTIB,%20JL%20DIPONEGORO%203%20PUNCU%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "PUNCU",
+                "nama": "BUDI SHANJAYA, DR",
+                "alamat": "DS WATUGEDE KEC PUNCU KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=BUDI%20SHANJAYA,%20DR,%20DS%20WATUGEDE%20KEC%20PUNCU%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "PUNCU",
+                "nama": "FX RETRIATMADJA MOESTOPO, DR",
+                "alamat": "PERTOKOAN DS GADUNGAN PUNCU",
+                "url": "https://www.google.com/maps/search/?api=1&query=FX%20RETRIATMADJA%20MOESTOPO,%20DR,%20PERTOKOAN%20DS%20GADUNGAN%20PUNCU"
+            },
+            {
+                "Kecamatan": "PURWOASRI",
+                "nama": "H. TRI HANDOYO, DR",
+                "alamat": "JL. PAHLAWAN 111 PURWOASRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=H.%20TRI%20HANDOYO,%20DR,%20JL.%20PAHLAWAN%20111%20PURWOASRI"
+            },
+            {
+                "Kecamatan": "RINGINREJO",
+                "nama": "IMROATUS SOLIKAH, DR.",
+                "alamat": "JL.CENDRAWASIH DS.RINGINREJO",
+                "url": "https://www.google.com/maps/search/?api=1&query=IMROATUS%20SOLIKAH,%20DR.,%20JL.CENDRAWASIH%20DS.RINGINREJO"
+            },
+            {
+                "Kecamatan": "SEMEN",
+                "nama": "AHMAD FANANI, DR",
+                "alamat": "JL RAYA SIDOMULYO 23 A, SEMEN",
+                "url": "https://www.google.com/maps/search/?api=1&query=AHMAD%20FANANI,%20DR,%20JL%20RAYA%20SIDOMULYO%2023%20A,%20SEMEN"
+            },
+            {
+                "Kecamatan": "SEMEN",
+                "nama": "YOYOK HERU PRASETYO, DR.",
+                "alamat": "JL. ARGOWILIS SEMEN",
+                "url": "https://www.google.com/maps/search/?api=1&query=YOYOK%20HERU%20PRASETYO,%20DR.,%20JL.%20ARGOWILIS%20SEMEN"
+            },
+            {
+                "Kecamatan": "TAROKAN",
+                "nama": "SHIRLEY ASTRID F, DR",
+                "alamat": "DS KEREP KEC TAROKAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=SHIRLEY%20ASTRID%20F,%20DR,%20DS%20KEREP%20KEC%20TAROKAN"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "PRAMUSINTO, DR",
+                "alamat": "JL KELUD 25 WATES KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PRAMUSINTO,%20DR,%20JL%20KELUD%2025%20WATES%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "dr. RAHMAD DWI MULJANTO (JST)",
+                "alamat": "JL KEDIRI 7 WATES KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20RAHMAD%20DWI%20MULJANTO%20(JST),%20JL%20KEDIRI%207%20WATES%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "dr. ERNANTI WULANDARI (JST)",
+                "alamat": "DS SUMBERAGUNG WATES KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=dr.%20ERNANTI%20WULANDARI%20(JST),%20DS%20SUMBERAGUNG%20WATES%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "WAHID, DR",
+                "alamat": "JL. RAYA NO 259, TAWANG, WATES",
+                "url": "https://www.google.com/maps/search/?api=1&query=WAHID,%20DR,%20JL.%20RAYA%20NO%20259,%20TAWANG,%20WATES"
+            }
+        ]
+    },
+
+    {
+        "klinik": [
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "KLINIK PRATAMA LAVIDA",
+                "alamat": "JL. PAHLAWAN KUSUMA BANGSA NO.",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20LAVIDA,%20JL.%20PAHLAWAN%20KUSUMA%20BANGSA%20NO."
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "KLINIK AR FACHRUDIN",
+                "alamat": "JL. PERINTIS KEMERDEKAAN NO. 4",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20AR%20FACHRUDIN,%20JL.%20PERINTIS%20KEMERDEKAAN%20NO.%204"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "KLINIK SAMUDRA HUSADA KUSUMA",
+                "alamat": "JL ISKANDAR MUDA 15 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20SAMUDRA%20HUSADA%20KUSUMA,%20JL%20ISKANDAR%20MUDA%2015%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "POLRES KEDIRI KOTA",
+                "alamat": "JL. HASANUDIN 31",
+                "url": "https://www.google.com/maps/search/?api=1&query=POLRES%20KEDIRI%20KOTA,%20JL.%20HASANUDIN%2031"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "BP DHAHA MEDIKA (JST)",
+                "alamat": "JL KAPT TENDEAN 163 NGGRONGGO",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20DHAHA%20MEDIKA%20(JST),%20JL%20KAPT%20TENDEAN%20163%20NGGRONGGO"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "BP IMAM BONJOL",
+                "alamat": "JL IMAM BONJOL 86 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20IMAM%20BONJOL,%20JL%20IMAM%20BONJOL%2086%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "BP DKT KEDIRI",
+                "alamat": "JL MAYJEN SUNGKONO 44 A KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20DKT%20KEDIRI,%20JL%20MAYJEN%20SUNGKONO%2044%20A%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "KLINIK PRATAMA ELSHADAI",
+                "alamat": "JL. MANGGA NO. 58",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20ELSHADAI,%20JL.%20MANGGA%20NO.%2058"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "BP NUSA MEDIKA MERITJAN KEDIRI",
+                "alamat": "JL MERBABU 12 A-B KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20NUSA%20MEDIKA%20MERITJAN%20KEDIRI,%20JL%20MERBABU%2012%20A-B%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "BP SALSABILA MEDIKA",
+                "alamat": "JL PENANGGUNGAN 87 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20SALSABILA%20MEDIKA,%20JL%20PENANGGUNGAN%2087%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "KLINIK BANDAR LOR",
+                "alamat": "JL KH WACHID HASYIM GG II B/34",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20BANDAR%20LOR,%20JL%20KH%20WACHID%20HASYIM%20GG%20II%20B/34"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "KLINIK DR. CHRESLINA",
+                "alamat": "JL. GATOT SUBROTO NOMOR 161",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20DR.%20CHRESLINA,%20JL.%20GATOT%20SUBROTO%20NOMOR%20161"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "BP NUSA MEDIKA PESANTREN BARU",
+                "alamat": "JL MAUNI 334 PESANTREN KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20NUSA%20MEDIKA%20PESANTREN%20BARU,%20JL%20MAUNI%20334%20PESANTREN%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "Klinik Betesda",
+                "alamat": "JL. MAYJEN PANJAITAN NO. 3B",
+                "url": "https://www.google.com/maps/search/?api=1&query=Klinik%20Betesda,%20JL.%20MAYJEN%20PANJAITAN%20NO.%203B"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "KLINIK SINAR MEDIKA",
+                "alamat": "JL. RAYA BETET NO. 107",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20SINAR%20MEDIKA,%20JL.%20RAYA%20BETET%20NO.%20107"
+            },
+            {
+                "Kecamatan": "BADAS",
+                "nama": "KLINIK PRATAMA NU BADAS MEDIKA",
+                "alamat": "JL. UNTUNG SUROPATI NO.99",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20NU%20BADAS%20MEDIKA,%20JL.%20UNTUNG%20SUROPATI%20NO.99"
+            },
+            {
+                "Kecamatan": "GROGOL",
+                "nama": "KLINIK PRATAMA NURSYIFA",
+                "alamat": "JL. RAYA WONOASRI NO. 01",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20NURSYIFA,%20JL.%20RAYA%20WONOASRI%20NO.%2001"
+            },
+            {
+                "Kecamatan": "GROGOL",
+                "nama": "KLINIK PRATAMA DR. VITIS",
+                "alamat": "JL. JAWA NO. 262, DSN. SEMBAK",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20DR.%20VITIS,%20JL.%20JAWA%20NO.%20262,%20DSN.%20SEMBAK"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "KLINIK WAHYU HUSADA",
+                "alamat": "JL TENGAH 224 DS BESUK GURAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20WAHYU%20HUSADA,%20JL%20TENGAH%20224%20DS%20BESUK%20GURAH"
+            },
+            {
+                "Kecamatan": "KANDAT",
+                "nama": "KLINIK PRATAMA JIMBUN MEDIKA",
+                "alamat": "JIMBUN",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20JIMBUN%20MEDIKA,%20JIMBUN"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "KLINIK PRATAMA RK MEDIKA",
+                "alamat": "JL JOYOBOYO",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20RK%20MEDIKA,%20JL%20JOYOBOYO"
+            },
+            {
+                "Kecamatan": "KEPUNG",
+                "nama": "BP VITA MEDIKA",
+                "alamat": "JL HARINJING 439 KEPUNG",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20VITA%20MEDIKA,%20JL%20HARINJING%20439%20KEPUNG"
+            },
+            {
+                "Kecamatan": "KEPUNG",
+                "nama": "BP Asfiyak Graha Medika",
+                "alamat": "DSN KENCONG BARATKEPUNG",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20Asfiyak%20Graha%20Medika,%20DSN%20KENCONG%20BARATKEPUNG"
+            },
+            {
+                "Kecamatan": "KEPUNG",
+                "nama": "KLINIK PRATAMA KUSUMA PERTIWI",
+                "alamat": "JL. HARINJING NO 2",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20KUSUMA%20PERTIWI,%20JL.%20HARINJING%20NO%202"
+            },
+            {
+                "Kecamatan": "KRAS",
+                "nama": "BP PANCA HUSADA SATATA",
+                "alamat": "JL KHMAKRUS ALI 46 KRAS  KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20PANCA%20HUSADA%20SATATA,%20JL%20KHMAKRUS%20ALI%2046%20KRAS%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KRAS",
+                "nama": "Klinik PKU Muhammadiyah",
+                "alamat": "JL. BRAWIJAYA NO. 85",
+                "url": "https://www.google.com/maps/search/?api=1&query=Klinik%20PKU%20Muhammadiyah,%20JL.%20BRAWIJAYA%20NO.%2085"
+            },
+            {
+                "Kecamatan": "KUNJANG",
+                "nama": "BP SURYA PRIMA HUSADA (JST)",
+                "alamat": "JL RAYA KUNJANG 1 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20SURYA%20PRIMA%20HUSADA%20(JST),%20JL%20RAYA%20KUNJANG%201%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJO",
+                "nama": "KLINIK DOKTERKU",
+                "alamat": "JL RAYA MOJO 1 DS/KEC.MOJO KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20DOKTERKU,%20JL%20RAYA%20MOJO%201%20DS/KEC.MOJO%20KDR"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "BP NUSA MEDIKA NGADIREJO",
+                "alamat": "DINAS PABRIK GULA NGADIREDJO NO 16",
+                "url": "https://www.google.com/maps/search/?api=1&query=BP%20NUSA%20MEDIKA%20NGADIREJO,%20DINAS%20PABRIK%20GULA%20NGADIREDJO%20NO%2016"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "KLINIK PRATAMA MEDIKA KELUARGA",
+                "alamat": "JL. RAYA NGADILUWIH 19 KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20MEDIKA%20KELUARGA,%20JL.%20RAYA%20NGADILUWIH%2019%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "Klinik Surya",
+                "alamat": "JL. TUNGGUL WULUNG NO. 15",
+                "url": "https://www.google.com/maps/search/?api=1&query=Klinik%20Surya,%20JL.%20TUNGGUL%20WULUNG%20NO.%2015"
+            },
+            {
+                "Kecamatan": "PAGU",
+                "nama": "KLINIK RAWAT INAP AURA SYIFA 2",
+                "alamat": "JL.BRAWIJAYA NO 200 PAGU",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20RAWAT%20INAP%20AURA%20SYIFA%202,%20JL.BRAWIJAYA%20NO%20200%20PAGU"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "POLRES KEDIRI",
+                "alamat": "JL. BHAYANGKARA",
+                "url": "https://www.google.com/maps/search/?api=1&query=POLRES%20KEDIRI,%20JL.%20BHAYANGKARA"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "KLINIK MITRA HUSADA I (JST)",
+                "alamat": "JL YOS SUDARSO 37 PARE",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20MITRA%20HUSADA%20I%20(JST),%20JL%20YOS%20SUDARSO%2037%20PARE"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "KLINIK RAWAT INAP SITI FATIMAH",
+                "alamat": "JL. AHMAD YANI 34A",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20RAWAT%20INAP%20SITI%20FATIMAH,%20JL.%20AHMAD%20YANI%2034A"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "KLINIK NUSA MEDIKA TULUNGREDJO",
+                "alamat": "JL AHMAD YANI 28-29",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20NUSA%20MEDIKA%20TULUNGREDJO,%20JL%20AHMAD%20YANI%2028-29"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "KLINIK RI  SINAR MEDIKA",
+                "alamat": "DSN. BLENDRI RT 001 RW 001",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20RI%20SINAR%20MEDIKA,%20DSN.%20BLENDRI%20RT%20001%20RW%20001"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "KLINIK PARADISE PARISUDHA",
+                "alamat": "JL. RAYA PARE WATES NO 290 D",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PARADISE%20PARISUDHA,%20JL.%20RAYA%20PARE%20WATES%20NO%20290%20D"
+            },
+            {
+                "Kecamatan": "PURWOASRI",
+                "nama": "KLINIK PRATAMA AULIA 3",
+                "alamat": "JL. RAYA KARANGPAKIS",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20AULIA%203,%20JL.%20RAYA%20KARANGPAKIS"
+            },
+            {
+                "Kecamatan": "TAROKAN",
+                "nama": "KLINIK PRATAMA PURI HUSADA",
+                "alamat": "JL. RAYA KEDIRI-NGANJUK",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20PURI%20HUSADA,%20JL.%20RAYA%20KEDIRI-NGANJUK"
+            },
+            {
+                "Kecamatan": "TAROKAN",
+                "nama": "KLINIK PARAMITHA MEDIKA",
+                "alamat": "JL. RAYA BULUSARI NO.35",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PARAMITHA%20MEDIKA,%20JL.%20RAYA%20BULUSARI%20NO.35"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "KLINIK PRATAMA MUTIARA MEDIKA",
+                "alamat": "JL..RAYA NO/ 23 JOHO WATES",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20MUTIARA%20MEDIKA,%20JL..RAYA%20NO/%2023%20JOHO%20WATES"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "KLINIK PRATAMA PRISDHY",
+                "alamat": "JL RAYA WATES KEDIRI NO. 288 A",
+                "url": "https://www.google.com/maps/search/?api=1&query=KLINIK%20PRATAMA%20PRISDHY,%20JL%20RAYA%20WATES%20KEDIRI%20NO.%20288%20A"
+            }
+        ]
+    },
+
+    {
+        "puskesmas": [
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "PUSKESMAS KOTA WIL UTARA",
+                "alamat": "JL SAM RATULANGI NO 12 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KOTA%20WIL%20UTARA,%20JL%20SAM%20RATULANGI%20NO%2012%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "PUSKESMAS BALOWERTI",
+                "alamat": "BALOWERTI GG V/68 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20BALOWERTI,%20BALOWERTI%20GG%20V/68%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEDIRI",
+                "nama": "PUSKESMAS KOTA WILAYAH SELATAN",
+                "alamat": "JL KAPT TENDEAN 156 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KOTA%20WILAYAH%20SELATAN,%20JL%20KAPT%20TENDAN%20156%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "PUSKESMAS MRICAN",
+                "alamat": "JL GUNUNG AGUNG NO. 225 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20MRICAN,%20JL%20GUNUNG%20AGUNG%20NO.%20225%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "PUSKESMAS CAMPUREJO",
+                "alamat": "JL DR SAHARJO 35 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20CAMPUREJO,%20JL%20DR%20SAHARJO%2035%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJOROTO",
+                "nama": "PUSKESMAS SUKORAME",
+                "alamat": "JL VETERAN 50 A KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SUKORAME,%20JL%20VETERAN%2050%20A%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "PUSKESMAS PESANTREN I",
+                "alamat": "JL BRIGJENPOL IMAM BACHRI 94",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PESANTREN%20I,%20JL%20BRIGJENPOL%20IMAM%20BACHRI%2094"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "PUSKESMAS PESANTREN II",
+                "alamat": "JL CENDANA 30 KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PESANTREN%20II,%20JL%20CENDANA%2030%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PESANTREN",
+                "nama": "PUSKESMAS NGLETIH",
+                "alamat": "JL RAYA NGLETIH BAWANG KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20NGLETIH,%20JL%20RAYA%20NGLETIH%20BAWANG%20KEDIRI"
+            },
+            {
+                "Kecamatan": "BADAS",
+                "nama": "PUSKESMAS BADAS",
+                "alamat": "DS BADAS, KECAMATAN BADAS",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20BADAS,%20DS%20BADAS,%20KECAMATAN%20BADAS"
+            },
+            {
+                "Kecamatan": "BANYAKAN",
+                "nama": "PUSKESMAS TIRON",
+                "alamat": "DS.TIRON BANYAKAN KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20TIRON,%20DS.TIRON%20BANYAKAN%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "GAMPENGREJO",
+                "nama": "PUSKESMAS GAMPENGREJO",
+                "alamat": "JL. RAYA GAMPENG 124 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20GAMPENGREJO,%20JL.%20RAYA%20GAMPENG%20124%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "GROGOL",
+                "nama": "PUSKESMAS GROGOL",
+                "alamat": "DS SONOREJO GROGOL",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20GROGOL,%20DS%20SONOREJO%20GROGOL"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "PUSKESMAS GURAH",
+                "alamat": "JL. KOLONEL SERUJI 10 GURAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20GURAH,%20JL.%20KOLONEL%20SERUJI%2010%20GURAH"
+            },
+            {
+                "Kecamatan": "GURAH",
+                "nama": "PUSKESMAS ADAN-ADAN",
+                "alamat": "DS ADAN-ADAN GURAH",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20ADAN-ADAN,%20DS%20ADAN-ADAN%20GURAH"
+            },
+            {
+                "Kecamatan": "KANDANGAN",
+                "nama": "PUSKESMAS KANDANGAN",
+                "alamat": "JL MALANG 109 KANDANGAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KANDANGAN,%20JL%20MALANG%20109%20KANDANGAN"
+            },
+            {
+                "Kecamatan": "KANDAT",
+                "nama": "PUSKESMAS BLABAK",
+                "alamat": "JL RAYA KEDIRI BLITAR NO. 304",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20BLABAK,%20JL%20RAYA%20KEDIRI%20BLITAR%20NO.%20304"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "PUSKESMAS KAYENKIDUL",
+                "alamat": "DS KAYEN KIDUL",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KAYENKIDUL,%20DS%20KAYEN%20KIDUL"
+            },
+            {
+                "Kecamatan": "KAYEN KIDUL",
+                "nama": "PUSKESMAS BANGSONGAN",
+                "alamat": "JL. RAYA BANGSONGAN NO.2",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20BANGSONGAN,%20JL.%20RAYA%20BANGSONGAN%20NO.2"
+            },
+            {
+                "Kecamatan": "KEPUNG",
+                "nama": "PUSKESMAS KEPUNG",
+                "alamat": "JL HARINJING 23 KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KEPUNG,%20JL%20HARINJING%2023%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KEPUNG",
+                "nama": "PUSKESMAS KELING",
+                "alamat": "JL RAYA KANDANGAN 384 KELING",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KELING,%20JL%20RAYA%20KANDANGAN%20384%20KELING"
+            },
+            {
+                "Kecamatan": "KRAS",
+                "nama": "PUSKESMAS KRAS",
+                "alamat": "JL SETYA BAKTI 222 KRAS",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KRAS,%20JL%20SETYA%20BAKTI%20222%20KRAS"
+            },
+            {
+                "Kecamatan": "KRAS",
+                "nama": "PUSKESMAS PELAS",
+                "alamat": "DS PELAS KRAS KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PELAS,%20DS%20PELAS%20KRAS%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "KUNJANG",
+                "nama": "PUSKESMAS KUNJANG",
+                "alamat": "DS KAPI KUNJANG KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20KUNJANG,%20DS%20KAPI%20KUNJANG%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "MOJO",
+                "nama": "PUSKESMAS MOJO",
+                "alamat": "JL. RAYA MOJO NO.201",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20MOJO,%20JL.%20RAYA%20MOJO%20NO.201"
+            },
+            {
+                "Kecamatan": "MOJO",
+                "nama": "PUSKESMAS NGADI",
+                "alamat": "JL. RAYA NGADI 88, MOJO KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20NGADI,%20JL.%20RAYA%20NGADI%2088,%20MOJO%20KEDIRI"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "PUSKESMAS NGADILUWIH",
+                "alamat": "JL RAYA NGADILUWIH 86 KAB KDR",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20NGADILUWIH,%20JL%20RAYA%20NGADILUWIH%2086%20KAB%20KDR"
+            },
+            {
+                "Kecamatan": "NGADILUWIH",
+                "nama": "PUSKESMAS WONOREJO",
+                "alamat": "DS.WONOREJO NGADILUWIH",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20WONOREJO,%20DS.WONOREJO%20NGADILUWIH"
+            },
+            {
+                "Kecamatan": "NGANCAR",
+                "nama": "PUSKESMAS NGANCAR",
+                "alamat": "JL KELUD NGANCAR KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20NGANCAR,%20JL%20KELUD%20NGANCAR%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "NGASEM",
+                "nama": "PUSKESMAS NGASEM",
+                "alamat": "DS NGASEM KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20NGASEM,%20DS%20NGASEM%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PAGU",
+                "nama": "PUSKESMAS PAGU",
+                "alamat": "JL. SUPRIADI 98, PAGU KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PAGU,%20JL.%20SUPRIADI%2098,%20PAGU%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PAPAR",
+                "nama": "PUSKESMAS PAPAR",
+                "alamat": "JL. RAYA PAPAR - KEDIRI DESA T",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PAPAR,%20JL.%20RAYA%20PAPAR%20-%20KEDIRI%20DESA%20T"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "PUSKESMAS BENDO",
+                "alamat": "JL. SOEKARNO HATTA, NO.27",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20BENDO,%20JL.%20SOEKARNO%20HATTA,%20NO.27"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "PUSKESMAS SIDOREJO",
+                "alamat": "JL. MT HARYONO 23 DS SIDOREJO",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SIDOREJO,%20JL.%20MT%20HARYONO%2023%20DS%20SIDOREJO"
+            },
+            {
+                "Kecamatan": "PARE",
+                "nama": "PUSKESMAS PARE",
+                "alamat": "JL WELIRANG 4 PARE KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PARE,%20JL%20WELIRANG%204%20PARE%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PLEMAHAN",
+                "nama": "PUSKESMAS PUHJARAK",
+                "alamat": "JL. RAYA PARE PAPAR, PLEMAHAN",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PUHJARAK,%20JL.%20RAYA%20PARE%20PAPAR,%20PLEMAHAN"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "PUSKESMAS PLOSOKLATEN",
+                "alamat": "JL RAYA BRENGGOLO KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PLOSOKLATEN,%20JL%20RAYA%20BRENGGOLO%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PLOSOKLATEN",
+                "nama": "PUSKESMAS PRANGGANG",
+                "alamat": "JL RAYA PARE-WATES PLOSOKLATEN",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PRANGGANG,%20JL%20RAYA%20PARE-WATES%20PLOSOKLATEN"
+            },
+            {
+                "Kecamatan": "PUNCU",
+                "nama": "PUSKESMAS PUNCU",
+                "alamat": "JL MANGGIS PUNCU KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PUNCU,%20JL%20MANGGIS%20PUNCU%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "PURWOASRI",
+                "nama": "PUSKESMAS PURWOASRI",
+                "alamat": "JL. RAYA PURWOASRI NO 15",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20PURWOASRI,%20JL.%20RAYA%20PURWOASRI%20NO%2015"
+            },
+            {
+                "Kecamatan": "PURWOASRI",
+                "nama": "PUSKESMAS SUMBERJO",
+                "alamat": "JL RAYA KUNJANG-KERTOSONO KM 3",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SUMBERJO,%20JL%20RAYA%20KUNJANG-KERTOSONO%20KM%203"
+            },
+            {
+                "Kecamatan": "RINGINREJO",
+                "nama": "PUSKESMAS SAMBI",
+                "alamat": "JL. SURYA SAMBI KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SAMBI,%20JL.%20SURYA%20SAMBI%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "SEMEN",
+                "nama": "PUSKESMAS SEMEN",
+                "alamat": "JL. ARGOWILIS 127 A, SEMEN",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SEMEN,%20JL.%20ARGOWILIS%20127%20A,%20SEMEN"
+            },
+            {
+                "Kecamatan": "TAROKAN",
+                "nama": "PUSKESMAS TAROKAN",
+                "alamat": "JL. SEKOLAHAN NOMOR 01",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20TAROKAN,%20JL.%20SEKOLAHAN%20NOMOR%2001"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "PUSKESMAS WATES",
+                "alamat": "DS.WATES KAB KEDIRI",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20WATES,%20DS.WATES%20KAB%20KEDIRI"
+            },
+            {
+                "Kecamatan": "WATES",
+                "nama": "PUSKESMAS SIDOMULYO",
+                "alamat": "Jl. WATES KEDIRI DSN NGRAJEK",
+                "url": "https://www.google.com/maps/search/?api=1&query=PUSKESMAS%20SIDOMULYO,%20Jl.%20WATES%20KEDIRI%20DSN%20NGRAJEK"
+            }
+        ]
+    }
+]
