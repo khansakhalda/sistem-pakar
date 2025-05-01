@@ -1,147 +1,185 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="id">
 <head>
-    <meta charset="utf-8" />
-    <title>Login SIPDIK - Sistem Informasi Penyakit dan Deteksi ISPA Klinis | Cek Gejala ISPA Secara Dini</title>
+    <meta charset="UTF-8">
+    <title>Masuk ke SIDINYAM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Meta Description -->
-    <meta name="description"
-        content="SIPDIK adalah aplikasi berbasis web yang membantu masyarakat mendeteksi gejala Infeksi Saluran Pernapasan Akut (ISPA) secara dini dan mudah. Akses informasi kesehatan ISPA dan cek kondisi kesehatan Anda dengan mudah melalui sistem ini.">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/vendors/images/uniska.png') }}" type="image/png">
 
-    <!-- Meta Keywords -->
-    <meta name="keywords"
-        content="SIPDIK, deteksi ISPA, gejala ISPA, kesehatan, infeksi saluran pernapasan, ISPA klinis, cek ISPA, deteksi dini ISPA, kesehatan masyarakat, aplikasi ISPA, cek gejala ISPA, penyakit pernapasan, cek kesehatan online">
-
-    <!-- Meta Author -->
-    <meta name="author" content="SIPDIK Team">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="SIPDIK - Sistem Informasi Penyakit dan Deteksi ISPA Klinis" />
-    <meta property="og:description"
-        content="SIPDIK membantu masyarakat mendeteksi gejala ISPA dengan cepat dan mudah melalui platform berbasis web. Dapatkan informasi kesehatan dan cek gejala Anda sekarang!" />
-    <meta property="og:url" content="https://www.sipdik.online" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://cek-ispa.online/assets/vendors/images/logo.png" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SIPDIK - Sistem Informasi Penyakit dan Deteksi ISPA Klinis">
-    <meta name="twitter:description"
-        content="Aplikasi deteksi dini gejala ISPA berbasis web yang memudahkan masyarakat mendapatkan informasi kesehatan yang akurat.">
-    <meta name="twitter:image" content="https://cek-ispa.online/assets/vendors/images/logo.png">
-
-    <!-- Robots Meta Tag -->
-    <meta name="robots" content="index, follow">
-    <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href={{ asset('assets/vendors/images/uniska.png') }} />
-    <link rel="icon" type="image/png" sizes="32x32" href={{ asset('assets/vendors/images/uniska.png') }} />
-    <link rel="icon" type="image/png" sizes="16x16" href={{ asset('assets/vendors/images/uniska.png') }} />
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description"
-        content="sistem pakar infeksi saluran pernapasan akut ispa dengan metode certainly factor" />
-    <meta name="keywords" content="sistem pakar login, expert system" />
-    <link rel="stylesheet" href={{ asset('assets/login/style.css') }} />
-
-    <style type="text/css">
-        .fil0 {
-            fill: #c27b55;
+    <!-- Custom Style -->
+    <style>
+        body {
+            background: linear-gradient(to right, #fff5ec, #ffffff); /* Oranye muda ke putih */
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .fil1 {
-            fill: #f2cbb6;
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 95vh;
         }
 
-        .fil2 {
-            fill: #fff0e8;
+        .login-box {
+            background-color: #ffffff;
+            padding: 32px 28px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            max-width: 370px;
+            width: 100%;
         }
 
-        .author_info {
+        .login-box .avatar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .login-box .avatar img {
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        .login-box h4 {
+            font-size: 16px;
+            font-weight: 600;
             text-align: center;
+            color: #ff914d; /* Oranye */
+            margin-bottom: 20px;
         }
 
-        .author_info ul {
-            list-style: none;
-            margin-top: 10px;
+        .login-box label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 4px;
+            display: block;
         }
 
-        .author_info ul li {
-            margin-right: 10px;
-            display: inline;
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 13px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 16px;
         }
 
-        .author_info ul li a img {
-            width: 40px;
+        .form-check {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
+
+        .form-check input {
+            margin-right: 6px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: #ff914d;
+            text-decoration: none;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #ff914d;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .alert {
+            font-size: 12px;
+            color: red;
+            margin-top: -12px;
+            margin-bottom: 10px;
+        }
+
+        .btn-outline-orange {
+    background-color: #ffffff;
+    color: #ff914d;
+    border: 2px solid #ff914d;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+    background-color: #ff914d;
+    color: #ffffff;
+}
+
     </style>
 </head>
 
 <body>
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-        <div class="login-title">
-            <h1>Login SIPDIK</h1>
-        </div>
-        @include('Dashboard.login.avatar')
+    <div class="login-wrapper">
+        <form method="POST" action="{{ route('login') }}" class="login-box">
+            @csrf
 
-        <div class="inputGroup inputGroup1">
-            <label for="loginEmail" id="loginEmailLabel">Email</label>
-            <input type="email" id="loginEmail" required name="email" />
+            <div class="avatar">
+                <img src="{{ asset('assets/vendors/images/profile.png') }}" alt="Avatar">
+            </div>
 
-            @if ($errors->get('email'))
-                <div class="alert">
-                    @foreach ($errors->get('email') as $error)
-                        <li>{{ $error }}
-                    @endforeach
-                </div>
-            @endif
-        </div>
+            <h4>Masuk ke SIDINYAM</h4>
 
-        <div class="inputGroup inputGroup2">
-            <label for="loginPassword" id="loginPasswordLabel">Password</label>
-            <input type="password" id="loginPassword" name="password" required />
-            <label id="showPasswordToggle" for="showPasswordCheck">Show
-                <input id="showPasswordCheck" type="checkbox" />
-                <div class="indicator"></div>
-            </label>
-            @if ($errors->get('password'))
-                <div class="alert">
-                    @foreach ($errors->get('password') as $error)
-                        <li>{{ $error }}
-                    @endforeach
-                </div>
-            @endif
-        </div>
-        <div class="inputGroup inputGroup3">
-            <input id="remember" type="checkbox" name="remember" />
-            <label for="remember">Remember Me</label>
-        </div>
-        <!-- Lupa Kata Sandi -->
-<div class="inputGroup inputGroup3" style="text-align: center; margin-bottom: 10px;">
-    <a href="{{ route('password.request') }}" style="color: #007bff; text-decoration: underline;">
-        Lupa Kata Sandi?
-    </a>
-</div>
+            {{-- Email --}}
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+            @error('email')
+                <div class="alert">{{ $message }}</div>
+            @enderror
 
-<!-- Tombol Login -->
-<div class="inputGroup inputGroup3">
-    <button type="submit" id="login">Log in</button>
-</div>
+            {{-- Password --}}
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" required>
+            @error('password')
+                <div class="alert">{{ $message }}</div>
+            @enderror
 
-<!-- Tombol Kembali -->
-<div class="inputGroup inputGroup3">
-    <a href="{{ route('home') }}">
-        <button id="back" type="button">Kembali</button>
-    </a>
-</div>
-    </form>
+            {{-- Remember Me --}}
+            <div class="form-check">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Ingat Saya</label>
+            </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182"></script>
-    <script src="{{ asset('assets/login/script.js') }}"></script>
+            {{-- Forgot Password --}}
+            <div class="forgot-password">
+                <a href="{{ route('password.request') }}">Lupa kata sandi?</a>
+            </div>
 
+            {{-- Button Masuk --}}
+            <button type="submit" class="btn btn-primary">Masuk</button>
+
+            {{-- Button Kembali --}}
+            <a href="{{ url('/') }}">
+    <button type="button" class="btn btn-outline-orange">Kembali</button>
+</a>
+        </form>
+    </div>
 </body>
-
 </html>

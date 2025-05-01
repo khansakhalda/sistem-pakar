@@ -1,73 +1,54 @@
 @extends('Dashboard.layout.app')
 
 @section('content')
-    <div class="page-header">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="title">
-                    <h4>Gejala</h4>
-                </div>
-                <nav aria-label="breadcrumb" role="navigation">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href={{ route('dashboard') }}>Home</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href={{ route('gejala.index') }}>Gejala</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            Edit Gejala
-                        </li>
-                    </ol>
-                </nav>
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="title">
+                <h4 class="fw-bold" style="color: #ff9800;">Form Ubah Gejala</h4>
             </div>
-
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white px-3 py-2 shadow-sm rounded">
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('gejala.index') }}">Gejala</a></li>
+                    <li class="breadcrumb-item active" style="color: #ff9800;" aria-current="page">Ubah</li>
+                </ol>
+            </nav>
         </div>
     </div>
-    <!-- basic table  Start -->
-    <div class="pd-20 card-box mb-30" style="margin-top: -1.2em">
-        <div class="clearfix mb-20">
-            <div class="pull-left">
-                <h4 class="text-blue h4">Edit Gejala</h4>
+</div>
 
-            </div>
+<div class="card-box pd-20 mb-30 mt-3">
+    <h5 class="fw-semibold mb-4" style="color: #ff9800;">Ubah Data Gejala</h5>
 
-        </div>
-        @if ($errors->any())
-            <div class="alert alert-danger">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
-            </div>
-        @endif
+            </ul>
+        </div>
+    @endif
 
-        <form action={{ route('gejala.update', $data->kode_gejala) }} method="POST">
-            @csrf
-            @method('PUT')
-            <div class="form-group row">
-                <label class="col-sm-12 col-md-2 col-form-label">Kode Gejala</label>
-                <div class="col-sm-12 col-md-10">
-                    <input class="form-control" name="kode_gejala" type="text" readonly value={{ $data->kode_gejala }}>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-12 col-md-2 col-form-label">Nama Gejala</label>
-                <div class="col-sm-12 col-md-10">
-                    <input class="form-control" type="text" name="nama_gejala" value="{{ $data->nama_gejala }}">
-                </div>
-            </div>
+    <form action="{{ route('gejala.update', $data->kode_gejala) }}" method="POST">
+        @csrf
+        @method('PUT')
 
+        <div class="mb-3">
+            <label for="kode_gejala" class="form-label fw-semibold">Kode Gejala</label>
+            <input type="text" name="kode_gejala" id="kode_gejala" class="form-control" value="{{ $data->kode_gejala }}" readonly>
+        </div>
 
+        <div class="mb-4">
+            <label for="nama_gejala" class="form-label fw-semibold">Nama Gejala</label>
+            <input type="text" name="nama_gejala" id="nama_gejala" class="form-control" value="{{ $data->nama_gejala }}" placeholder="Contoh: Batuk Kering, Demam">
+        </div>
 
-            <div class="d-flex flex-row-reverse" style="gap:8px;">
-                <button class="btn btn-large btn-info " type="submit">Simpan</button>
-                <a href={{ route('gejala.index') }} class="btn btn-large btn-dark ">Batal</a>
-            </div>
-
-
-        </form>
-
-    </div>
-
-    <!-- basic table  End -->
+        <div class="d-flex justify-content-end mt-4" style="gap: 12px;">
+            <a href="{{ route('gejala.index') }}" class="btn btn-danger">Batal</a>
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </div>
+    </form>
+</div>
 @endsection

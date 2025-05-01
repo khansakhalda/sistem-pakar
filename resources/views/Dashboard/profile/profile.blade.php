@@ -2,32 +2,24 @@
 
 @section('content')
     <div class="page-header">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="title">
-                    <h4>Profile</h4>
-                </div>
-                <nav aria-label="breadcrumb" role="navigation">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href={{ route('dashboard') }}>Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                            Profile
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-1 fw-bold" style="color: #ff9800;">Profil</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm">
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
+                    <li class="breadcrumb-item active" style="color: #ff9800;" aria-current="page">Profil</li>
+                </ol>
+            </nav>
         </div>
     </div>
+</div>
     <!-- basic table  Start -->
     <div class="pd-20 card-box mb-30" style="margin-top: -1.2rem">
         <div class="clearfix mb-20">
             <div class="pull-left">
-                <h4 class="text-blue h4">Informasi Akun</h4>
-                <p class="text-secondary " style="margin-top: -0.5rem"><small>Ubah form dibawah untuk memperbaharui
-                        profile anda.</small></p>
+                <h4 class="text-blue h4" style="color: #ff9800;">Informasi Akun</h4>
+                <p class="text-secondary " style="margin-top: -0.5rem"><small>Silakan isi formulir di bawah ini untuk memperbarui profil Anda.</small></p>
 
             </div>
 
@@ -81,8 +73,7 @@
 
 
             <div class="flex-row-reverse d-flex" style="gap:8px;">
-                <button class="btn btn-large btn-info " type="submit">Simpan</button>
-                {{-- <a href={{ route('data-admin.index') }} class="btn btn-large btn-dark ">Kembali</a> --}}
+                <button class="btn btn-success btn-lg" type="submit">Simpan</button>
             </div>
 
 

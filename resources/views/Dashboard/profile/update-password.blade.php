@@ -2,9 +2,8 @@
     <div class="pd-20 card-box mb-30" style="margin-top: -1.2rem">
         <div class="clearfix mb-20">
             <div class="pull-left">
-                <h4 class="text-black h4">Update Password</h4>
-                <p class="text-secondary " style="margin-top: -0.5rem"><small>Ubah form dibawah untuk memperbaharui
-                        password anda.</small></p>
+                <h4 class="text-black h4" style="color: #ff9800;">Perbarui Password</h4>
+                <p class="text-secondary " style="margin-top: -0.5rem"><small>Silakan isi formulir di bawah ini untuk memperbarui kata sandi Anda.</small></p>
 
             </div>
 
@@ -63,8 +62,7 @@
             </div>
 
             <div class="d-flex flex-row-reverse" style="gap:8px;">
-                <button class="btn btn-large btn-info " type="submit">Simpan Password Baru</button>
-                {{-- <a href={{ route('data-admin.index') }} class="btn btn-large btn-dark ">Kembali</a> --}}
+                <button class="btn btn-success btn-lg" type="submit">Simpan Password Baru</button>
             </div>
 
 

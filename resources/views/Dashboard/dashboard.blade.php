@@ -1,6 +1,19 @@
 @extends('Dashboard.layout.app')
 
 @section('content')
+    <style>
+        .btn-orange {
+            background-color: #ff914d;
+            color: white;
+            border: none;
+        }
+
+        .btn-orange:hover {
+            background-color: #ff7b2d;
+            color: white;
+        }
+    </style>
+
     <div class="xs-pd-20-10 pd-ltr-20">
         @role('admin')
             <div class="pb-10 row" style="margin-top: -1.2em">
@@ -24,9 +37,7 @@
                         <div class="flex-wrap d-flex">
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">{{ $penyakit }}</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Data Penyakit
-                                </div>
+                                <div class="font-14 text-secondary weight-500">Data Penyakit</div>
                             </div>
                             <div class="widget-icon">
                                 <div class="icon" data-color="#ff5b5b">
@@ -41,9 +52,7 @@
                         <div class="flex-wrap d-flex">
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">{{ $rule }}</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Data Pengetahuan
-                                </div>
+                                <div class="font-14 text-secondary weight-500">Data Pengetahuan</div>
                             </div>
                             <div class="widget-icon">
                                 <div class="icon">
@@ -53,60 +62,36 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         @endrole
 
         <div class="mb-20">
-            <div class="card-box ">
-
-                {{-- <div id="carouselExampleControls" class=" carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" style="border-radius: 8px">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src={{ asset('assets/src/images/1.png') }} alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src={{ asset('assets/src/images/2.png') }} alt="First slide">
-                        </div>
-
-
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
-                </div> --}}
+            <div class="card-box">
                 <div class="w-100">
                     <img class="d-block w-100" src={{ asset('assets/vendors/images/banner.png') }} />
                 </div>
-                <p class="p-3" style="text-align: center;">Selamat datang di <strong>Sistem Informasi Penyakit dan
-                        Deteksi ISPA Klinis (SIPDIK)</strong>! Kami
-                    hadir untuk
-                    memberikan bantuan dalam
-                    mengidentifikasi dan mengelola penyakit ISPA. Mari bersama-sama menjaga
-                    kesehatan dan meningkatkan kesadaran kita mengenai
-                    penyakit ini.</p>
+                <p class="p-3" style="text-align: center;">
+                    Selamat datang di <strong>Sistem Informasi Penyakit Akibat Gigitan Nyamuk</strong>!<br>
+                    Platform ini dirancang untuk membantu Anda mengenali gejala serta mendeteksi potensi penyakit seperti
+                    DBD, malaria, chikungunya, encephalitis, zika, filariasis, dan demam kuning secara cepat dan akurat.<br>
+                    Mari bersama-sama menjaga kesehatan dan meningkatkan kewaspadaan terhadap penyakit tropis yang ditularkan oleh nyamuk.
+                </p>
+
                 @role('user')
-                    <div class="flex justify-center pt-2 pb-4 text-center " style="margin-top: -1rem">
-                        <a href={{ route('diagnosis.index') }} class="text-white btn btn-info ">
+                    <div class="flex justify-center pt-2 pb-4 text-center" style="margin-top: -1rem">
+                        <a href={{ route('diagnosis.index') }} class="btn btn-orange">
                             Cek Kondisi Anda Sekarang!
                         </a>
                     </div>
                 @endrole
-
             </div>
-
         </div>
-
     </div>
+
     @push('chatbot')
         <script src='https://app.wotnot.io/chat-widget/{{ env('WOTNOT_WIDGET_ID') }}.js' defer></script>
     @endpush
+
     @push('scripts')
         <script>
             function setCookie(name, value, days) {
@@ -130,11 +115,8 @@
                 return null;
             }
 
-            // Mengubah nilai cookie "introjs-dontShowAgain" menjadi false
-            setCookie("introjs-dontShowAgain", "false", 7); // 7 di sini berarti cookie akan bertahan 7 hari
-
-            // Memastikan nilai cookie telah diubah
-            console.log(getCookie("introjs-dontShowAgain")); // Harusnya mengembalikan "false"
+            setCookie("introjs-dontShowAgain", "false", 7);
+            console.log(getCookie("introjs-dontShowAgain"));
         </script>
     @endpush
 @endsection

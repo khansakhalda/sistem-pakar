@@ -5,11 +5,11 @@
     <!-- Basic Page Info -->
     <meta charset="utf-8" />
     <!-- Title -->
-    <title>SIPDIK - Sistem Informasi Penyakit dan Deteksi ISPA Klinis</title>
+    <title>SIDINYAM - Sistem Informasi Diagnosa Penyakit Akibat Gigitan Nyamuk</title>
 
     <!-- Meta Description -->
     <meta name="description"
-        content="SIPDIK adalah aplikasi berbasis web yang membantu masyarakat mendeteksi gejala Infeksi Saluran Pernapasan Akut (ISPA) secara dini dan mudah. Akses informasi kesehatan ISPA dan cek kondisi kesehatan Anda dengan mudah melalui sistem ini.">
+        content="SIDINYAM adalah aplikasi berbasis web yang membantu masyarakat mendeteksi gejala Infeksi Saluran Pernapasan Akut (ISPA) secara dini dan mudah. Akses informasi kesehatan ISPA dan cek kondisi kesehatan Anda dengan mudah melalui sistem ini.">
 
     <!-- Meta Keywords -->
     <meta name="keywords"
@@ -103,7 +103,7 @@
         @yield('content')
         <div class="mb-2 text-center footer-wrap pd-20 card-box">
             Copyright &copy; 2025
-            <a href="https://ft.uniska-kediri.ac.id/" style="color: black; text-decoration: none; font-weight: bold;"
+            <a href="https://ft.unsoed.ac.id/" style="color: black; text-decoration: none; font-weight: bold;"
                 target="_blank">
                 Fakultas Teknik - Prodi Informatika Universitas Jenderal Soedirman
             </a>
