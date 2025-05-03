@@ -2,107 +2,112 @@
 
 @section('content')
 <style>
-    h4.title-orange {
-        color: #ff914d;
-        font-weight: bold;
+    h4.title-blue {
+        color: #007bff;
+        font-weight: 600;
         margin-bottom: 1rem;
     }
 
     .info-label {
-        font-weight: bold;
+        font-weight: 500;
         color: #333;
     }
 
     .info-value {
-        color: #555;
+        color: #333;
     }
 
-    .tb-gejala,
-    .tb-gejala2 {
+    .modern-table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0;
         margin-top: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+        font-size: 0.95rem;
     }
 
-    .tb-gejala th,
-    .tb-gejala td,
-    .tb-gejala2 td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
-
-    .tb-gejala th {
-        background-color: #ffecd2;
-        color: #444;
-    }
-
-    .tb-gejala2 td:first-child {
-        width: 200px;
-        background-color: #fff5eb;
-        font-weight: bold;
-        color: #444;
-    }
-
-    .tb-gejala2 td:last-child {
-        background-color: #fff;
+    .modern-table th,
+    .modern-table td {
+        padding: 12px 16px;
         text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .modern-table th {
+        background-color: #f7f9fc;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .modern-table tr:last-child td {
+        border-bottom: none;
     }
 
     .highlight-box {
-        background-color: #fff9f0;
-        border: 1px solid #ffcc8f;
-        padding: 1rem;
-        border-radius: 5px;
+        background-color: #f8f9fb;
+        border-left: 4px solid #007bff;
+        padding: 1.2rem;
+        border-radius: 6px;
         margin-top: 1.5rem;
     }
 
-    .text-orange {
-        color: #ff914d;
-    }
-
-    .tabletitle h2 {
-        font-size: 1rem;
-        margin: 0;
+    .section-title {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #007bff;
     }
 
     .disclaimer {
         font-size: 0.9rem;
-        background-color: #fff4f4;
-        border: 1px solid #ffdddd;
-        padding: 10px;
+        background-color: #fff8f8;
+        border-left: 4px solid #dc3545;
+        padding: 12px;
         color: #b30000;
         margin-top: 2rem;
         border-radius: 6px;
     }
+
+    .print-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+    }
+
+    .print-btn:hover {
+        background-color: #218838;
+    }
 </style>
 
-<div class="xs-pd-10-1 pd-ltr-10">
-    <div class="page-header">
+<div class="xs-pd-10-1 pd-ltr-10 mb-5">
+    <div class="page-header mb-3">
         <div class="row">
             <div class="col-md-12">
-                <div class="title">
-                    <h4 class="text-orange">Hasil Diagnosis</h4>
-                </div>
-                <nav aria-label="breadcrumb" role="navigation">
-                    <ol class="breadcrumb">
+                <h4 class="title-blue">Hasil Diagnosis</h4>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
-                        <li class="breadcrumb-item active" aria-current="page" style="color: #ff914d;">Hasil Diagnosis</li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: #007bff;">Hasil Diagnosis</li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
 
-    <div class="pd-20 card-box mb-30">
+    <div class="card-box shadow-sm p-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4 class="title-orange">Diagnosis untuk: {{ $data->nama_pengguna }} ({{ $data->user->address }})</h4>
-            <a href="{{ route('cetak-diagnosis', $data->diagnosis_id) }}" class="btn btn-success">
+            <h5 class="fw-semibold" style="color: #333;">Diagnosis untuk: {{ $data->nama_pengguna }} ({{ $data->user->address }})</h5>
+            <a href="{{ route('cetak-diagnosis', $data->diagnosis_id) }}" class="print-btn">
                 <i class="bi bi-printer"></i> Cetak
             </a>
         </div>
 
-        <table class="mb-3">
+        <table>
             <tr>
                 <td class="info-label">Tanggal Konsultasi</td>
                 <td class="info-value">: {{ substr($data->created_at, 0, 10) }}</td>
@@ -113,10 +118,10 @@
             </tr>
         </table>
 
-        <h5 class="text-orange">Gejala yang Dipilih:</h5>
-        <table class="tb-gejala">
+        <div class="section-title">Gejala yang Dipilih:</div>
+        <table class="modern-table">
             <thead>
-                <tr class="tabletitle">
+                <tr>
                     <th>No</th>
                     <th>Kode Gejala</th>
                     <th>Nama Gejala</th>
@@ -136,32 +141,30 @@
             </tbody>
         </table>
 
-        <div class="highlight-box">
-            <p class="mb-2">Berdasarkan gejala dan kondisi yang Anda pilih, kemungkinan besar Anda mengalami:</p>
-            <table class="tb-gejala2">
+        <div class="highlight-box mt-4">
+            <p class="mb-2 text-dark">Berdasarkan gejala dan kondisi yang Anda pilih, kemungkinan besar Anda mengalami:</p>
+            <table class="table mb-0">
                 <tr>
-                    <td>Nama Penyakit</td>
+                    <td class="fw-bold" style="width: 200px;">Nama Penyakit</td>
                     <td>: {{ $data->desease->nama_penyakit }}</td>
                 </tr>
                 <tr>
-                    <td>Nilai Keyakinan</td>
+                    <td class="fw-bold">Nilai Keyakinan</td>
                     <td>: {{ number_format($data->nilai_akhir, 2) }}%</td>
                 </tr>
             </table>
         </div>
 
-        <h5 class="text-orange mt-4">Informasi Penyakit</h5>
-        <table class="tb-gejala">
-            <tr>
-                <td>{!! $data->desease->detail_penyakit !!}</td>
-            </tr>
-        </table>
+        <div class="section-title">Informasi Penyakit</div>
+        <div class="bg-white border p-3 rounded shadow-sm text-dark">
+            {!! $data->desease->detail_penyakit !!}
+        </div>
 
         @if(json_decode($data->hasil))
-            <h5 class="text-orange mt-4">Kemungkinan Penyakit Lain</h5>
-            <table class="tb-gejala">
+            <div class="section-title">Kemungkinan Penyakit Lain</div>
+            <table class="modern-table">
                 <thead>
-                    <tr class="tabletitle">
+                    <tr>
                         <th>No</th>
                         <th>Nama Penyakit</th>
                         <th>Nilai Keyakinan</th>
@@ -182,8 +185,8 @@
             </table>
         @endif
 
-        <p class="disclaimer mt-4">
-            <strong>Disclaimer:</strong> Hasil diagnosis ini bersifat sementara dan bukan pengganti pemeriksaan dokter. Silakan konsultasikan lebih lanjut kepada tenaga medis untuk diagnosis yang akurat.
+        <p class="disclaimer">
+            ⚠️<strong>Disclaimer:</strong> Hasil diagnosis ini bersifat sementara dan bukan pengganti pemeriksaan dokter. Silakan konsultasikan lebih lanjut kepada tenaga medis untuk diagnosis yang akurat.
         </p>
     </div>
 </div>

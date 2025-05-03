@@ -6,12 +6,12 @@ function selected($url)
 ?>
 
 <style>
-    /* Hover dan aktif: warna oranye */
+    /* Hover dan aktif: warna biru */
     .sidebar-menu li a:hover,
     .sidebar-menu li a.active,
     .submenu li a:hover,
     .submenu li a.active {
-        background-color: #ff914d !important;
+        background-color: #007bff !important;
         color: #fff !important;
         border-radius: 6px;
     }
@@ -30,7 +30,6 @@ function selected($url)
         padding-right: 50px;
         padding-left: 10px;
     }
-
 </style>
 
 <div class="left-side-bar">
@@ -69,7 +68,7 @@ function selected($url)
                 @role('admin')
                     <li>
                         <a href="{{ route('data-admin.index') }}" class="dropdown-toggle no-arrow {{ selected('data-admin') }}">
-                            <span class="micon bi bi-people-fill"></span><span class="mtext">Data User</span>
+                            <span class="micon bi bi-people-fill"></span><span class="mtext">Data Pengguna</span>
                         </a>
                     </li>
 

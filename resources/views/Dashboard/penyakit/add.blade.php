@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="title">
-                <h4 class="fw-bold" style="color: #ff9800;">Form Input Penyakit</h4>
+                <h4 class="fw-bold" style="color: #0d6efd;">Form Input Penyakit</h4>
             </div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white px-3 py-2 shadow-sm rounded">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('penyakit.index') }}">Penyakit</a></li>
-                    <li class="breadcrumb-item active" style="color: #ff9800;" aria-current="page">Tambah</li>
+                    <li class="breadcrumb-item active" style="color: #0d6efd;" aria-current="page">Tambah</li>
                 </ol>
             </nav>
         </div>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="card-box pd-20 mb-30 mt-3">
-    <h5 class="fw-semibold mb-4" style="color: #ff9800;">Tambah Data Penyakit Baru</h5>
+    <h5 class="fw-semibold mb-4" style="color: #0d6efd;">Tambah Data Penyakit Baru</h5>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -35,7 +35,7 @@
         @csrf
         <div class="mb-3">
             <label for="nama_penyakit" class="form-label fw-semibold">Nama Penyakit</label>
-            <input type="text" name="nama_penyakit" id="nama_penyakit" class="form-control" placeholder="Contoh: Asma, Bronkitis">
+            <input type="text" name="nama_penyakit" id="nama_penyakit" class="form-control" placeholder="Contoh: DBD, Malaria">
         </div>
 
         <div class="mb-4">
@@ -44,12 +44,11 @@
         </div>
 
         <div class="d-flex justify-content-end mt-4">
-    <div class="d-flex" style="gap: 16px;">
-        <a href="{{ route('penyakit.index') }}" class="btn btn-danger">Batal</a>
-        <button type="submit" class="btn btn-success">Simpan</button>
-    </div>
-</div>
-
+            <div class="d-flex" style="gap: 16px;">
+                <a href="{{ route('penyakit.index') }}" class="btn btn-danger">Batal</a>
+                <button type="submit" class="btn btn-success">Simpan</button>
+            </div>
+        </div>
     </form>
 </div>
 

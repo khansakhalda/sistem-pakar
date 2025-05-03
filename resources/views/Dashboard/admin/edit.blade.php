@@ -1,10 +1,10 @@
-@extends('Dashboard.layout.app')
+@extends('Dashboard.layout.app') 
 
 @push('styles')
 <style>
     input.form-control:focus {
-        border-color: #ff9800 !important;
-        box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+        border-color: #007bff !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
 </style>
 @endpush
@@ -14,22 +14,22 @@
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="title">
-                <h4 class="fw-bold" style="color: #ff9800;">Ubah Informasi Pengguna</h4>
+                <h4 class="fw-bold" style="color: #007bff;">Ubah Informasi Pengguna</h4>
             </div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('data-admin.index') }}">Daftar Pengguna</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" style="color: #ff9800;">Ubah Data</li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color: #007bff;">Ubah Data</li>
                 </ol>
             </nav>
         </div>
     </div>
 </div>
 
-<div class="card shadow-sm rounded-lg mt-3">
+<div class="card shadow-sm rounded-lg mt-3 mb-5">
     <div class="card-body">
-        <h5 class="fw-semibold mb-4" style="color: #ff9800;">Formulir Pengguna</h5>
+        <h5 class="fw-semibold mb-4" style="color: #007bff;">Formulir Pengguna</h5>
 
         @if ($errors->any())
             <div class="alert alert-danger">

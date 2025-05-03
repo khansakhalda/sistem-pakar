@@ -1,185 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Masuk ke SIDINYAM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Masuk ke SIDINYAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ asset('assets/vendors/images/nyamuk.png') }}" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #007bff, #6ec6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/vendors/images/uniska.png') }}" type="image/png">
+    .login-box {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 380px;
+      position: relative;
+    }
 
-    <!-- Custom Style -->
-    <style>
-        body {
-            background: linear-gradient(to right, #fff5ec, #ffffff); /* Oranye muda ke putih */
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    .avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-        .login-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 95vh;
-        }
+    .avatar img {
+      width: 80px;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+      padding: 4px;
+      background-color: #fff;
+    }
 
-        .login-box {
-            background-color: #ffffff;
-            padding: 32px 28px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-            max-width: 370px;
-            width: 100%;
-        }
+    h4 {
+      text-align: center;
+      color: #007bff;
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
 
-        .login-box .avatar {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    label {
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
+    }
 
-        .login-box .avatar img {
-            width: 70px;
-            border-radius: 50%;
-        }
+    .input-group {
+      position: relative;
+      margin-bottom: 18px;
+    }
 
-        .login-box h4 {
-            font-size: 16px;
-            font-weight: 600;
-            text-align: center;
-            color: #ff914d; /* Oranye */
-            margin-bottom: 20px;
-        }
+    .input-group input {
+      width: 90%;
+      padding: 10px 12px 10px 38px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
 
-        .login-box label {
-            font-size: 13px;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .login-box input[type="email"],
-        .login-box input[type="password"] {
-            width: 100%;
-            padding: 8px 12px;
-            font-size: 13px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            margin-bottom: 16px;
-        }
-
-        .form-check {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-
-        .form-check input {
-            margin-right: 6px;
-        }
-
-        .forgot-password {
-            text-align: right;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-
-        .forgot-password a {
-            color: #ff914d;
-            text-decoration: none;
-        }
-
-        .btn {
-            width: 100%;
-            border: none;
-            padding: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: #ff914d;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .btn-secondary {
-            background-color: #6c757d;
-            color: white;
-        }
-
-        .alert {
-            font-size: 12px;
-            color: red;
-            margin-top: -12px;
-            margin-bottom: 10px;
-        }
-
-        .btn-outline-orange {
-    background-color: #ffffff;
-    color: #ff914d;
-    border: 2px solid #ff914d;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    .input-group input:focus {
+  outline: none;
+  border: 1.5px solid rgba(0, 123, 255, 0.6); /* biru transparan */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15); /* efek glow halus */
 }
 
-.btn-outline-orange:hover {
-    background-color: #ff914d;
-    color: #ffffff;
-}
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
 
-    </style>
+    .form-check {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .form-check input {
+      margin-right: 6px;
+    }
+
+    .forgot-password {
+      text-align: right;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .forgot-password a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .btn {
+      width: 100%;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      transform: scale(1.02);
+    }
+
+    .btn-outline {
+      background-color: white;
+      color: #007bff;
+      border: 2px solid #007bff;
+    }
+
+    .btn-outline:hover {
+      background-color: #007bff;
+      color: white;
+      transform: scale(1.02);
+    }
+
+    .alert {
+      font-size: 12px;
+      color: red;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 
 <body>
-    <div class="login-wrapper">
-        <form method="POST" action="{{ route('login') }}" class="login-box">
-            @csrf
+  <form method="POST" action="{{ route('login') }}" class="login-box">
+    @csrf
 
-            <div class="avatar">
-                <img src="{{ asset('assets/vendors/images/profile.png') }}" alt="Avatar">
-            </div>
-
-            <h4>Masuk ke SIDINYAM</h4>
-
-            {{-- Email --}}
-            <label for="email">Alamat Email</label>
-            <input type="email" id="email" name="email" value="{{ old('email') }}" required>
-            @error('email')
-                <div class="alert">{{ $message }}</div>
-            @enderror
-
-            {{-- Password --}}
-            <label for="password">Kata Sandi</label>
-            <input type="password" id="password" name="password" required>
-            @error('password')
-                <div class="alert">{{ $message }}</div>
-            @enderror
-
-            {{-- Remember Me --}}
-            <div class="form-check">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Ingat Saya</label>
-            </div>
-
-            {{-- Forgot Password --}}
-            <div class="forgot-password">
-                <a href="{{ route('password.request') }}">Lupa kata sandi?</a>
-            </div>
-
-            {{-- Button Masuk --}}
-            <button type="submit" class="btn btn-primary">Masuk</button>
-
-            {{-- Button Kembali --}}
-            <a href="{{ url('/') }}">
-    <button type="button" class="btn btn-outline-orange">Kembali</button>
-</a>
-        </form>
+    <div class="avatar">
+      <img src="{{ asset('assets/vendors/images/profile.png') }}" alt="Avatar">
     </div>
+
+    <h4>Masuk ke SIDINYAM</h4>
+
+    <label for="email">Alamat Email</label>
+    <div class="input-group">
+      <i class="fa fa-envelope"></i>
+      <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+    </div>
+    @error('email')
+      <div class="alert">{{ $message }}</div>
+    @enderror
+
+    <label for="password">Kata Sandi</label>
+    <div class="input-group">
+      <i class="fa fa-lock"></i>
+      <input type="password" id="password" name="password" required>
+    </div>
+    @error('password')
+      <div class="alert">{{ $message }}</div>
+    @enderror
+
+    <div class="form-check">
+      <input type="checkbox" id="remember" name="remember">
+      <label for="remember">Ingat Saya</label>
+    </div>
+
+    <div class="forgot-password">
+      <a href="{{ route('password.request') }}">Lupa kata sandi?</a>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Masuk</button>
+
+    <a href="{{ url('/') }}">
+      <button type="button" class="btn btn-outline">Kembali</button>
+    </a>
+  </form>
 </body>
 </html>

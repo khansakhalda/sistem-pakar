@@ -6,7 +6,7 @@
         max-width: 300px;
         padding: 16px 18px;
         border-radius: 10px;
-        border: 2px solid #ff914d;
+        border: 2px solid #007bff;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         font-family: 'Segoe UI', sans-serif;
         font-size: 13px;
@@ -16,7 +16,7 @@
     .introjs-tooltip-title {
         font-size: 16px;
         font-weight: bold;
-        color: #ff914d;
+        color: #007bff;
         margin-bottom: 8px;
     }
 
@@ -28,7 +28,7 @@
     }
 
     .introjs-button {
-        background-color: #ff914d !important;
+        background-color: #007bff !important;
         color: #fff !important;
         border: none;
         padding: 6px 12px;
@@ -38,7 +38,7 @@
     }
 
     .introjs-button:hover {
-        background-color: #ff7b2d !important;
+        background-color: #0056b3 !important;
     }
 
     .introjs-skipbutton {
@@ -56,20 +56,48 @@
     }
 
     .introjs-bullets ul li a {
-        background-color: #ffd8bc !important;
+        background-color: #d0e4ff !important;
     }
 
     .introjs-bullets ul li a.active {
-        background-color: #ff914d !important;
+        background-color: #007bff !important;
     }
 
-    /* Cegah tombol ganda */
-    .introjs-tooltipbuttons button + button {
-        display: none !important;
-    }
+    .introjs-button {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.introjs-button:hover {
+    background-color: #0056b3 !important;
+}
+
+.introjs-tooltipbuttons button:focus {
+    outline: none;
+    box-shadow: none !important;
+}
 
     .introjs-tooltip .introjs-tooltip-title + .introjs-tooltiptext:empty {
         display: none;
+    }
+
+    .btn-custom-blue {
+        background: linear-gradient(135deg, #007bff, #339cff);
+        color: #fff;
+        border: none;
+    }
+
+    .btn-custom-blue:hover {
+        background: linear-gradient(135deg, #0056b3, #2a90ff);
     }
 </style>
 
@@ -77,12 +105,12 @@
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="title">
-                <h4 style="color: #ff9800;">Halaman Konsultasi</h4>
+                <h4 style="color: #007bff;">Halaman Konsultasi</h4>
             </div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" style="color: #ff9800;">Konsultasi</li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color: #007bff;">Konsultasi</li>
                 </ol>
             </nav>
         </div>
@@ -92,10 +120,10 @@
 <form action="{{ route('diagnosis.store') }}" method="POST">
     @csrf
     @method('POST')
-    <div class="pd-20 card-box" style="margin-top: -1.2em; margin-bottom: 5rem;">
+    <div class="pd-20 card-box mb-0 mb-md-2" style="margin-top: -1.2em;">
         <div class="mb-4">
-            <h4 class="fw-bold" style="color: #ff9800;">Form Diagnosa Awal</h4>
-            <p class="text-muted" style="margin-top: -0.5rem;">
+            <h4 class="fw-bold" style="color: #007bff;">Form Diagnosa Awal</h4>
+            <p class="text-muted" style="margin-top: 0.5rem;">
                 <small>Silakan pilih kondisi gejala yang sedang Anda alami secara jujur untuk hasil diagnosa yang akurat.</small>
             </p>
         </div>
@@ -153,9 +181,9 @@
                 @foreach ($gejala as $g)
                     <tr>
                         <td>{{ $i }}</td>
-                        <td @if ($i == 1) id="step1" class="highlight" @endif>{{ $g->nama_gejala }}</td>
+                        <td @if ($i == 1) id="step1" @endif>{{ $g->nama_gejala }}</td>
                         <td>
-                            <select name="cf[]" class="form-control cf3" @if ($i == 1) id="step2" class="highlight" @endif>
+                            <select name="cf[]" class="form-control" @if ($i == 1) id="step2" @endif>
                                 <option value="">Pilih sesuai kondisi Anda</option>
                                 @foreach ($term as $k)
                                     <option value="{{ $g->kode_gejala }}*{{ $g->nama_gejala }}*{{ $k['nilai'] }}*{{ $k['deskripsi'] }}">
@@ -170,8 +198,9 @@
             </tbody>
         </table>
 
-        <div style="position: fixed; bottom: 2em; right: 3em; z-index: 9999;" id="step3" class="highlight">
-            <button type="submit" class="p-3 shadow btn btn-lg btn-info rounded-circle" title="Mulai Diagnosis">
+        <!-- Floating Submit Button -->
+        <div style="position: fixed; bottom: 2em; right: 3em; z-index: 9999;" id="step3">
+            <button type="submit" class="p-3 shadow btn btn-lg rounded-circle btn-custom-blue" title="Mulai Diagnosis">
                 <img width="50" height="50" src="{{ asset('assets/vendors/images/diagnosis.gif') }}" alt="diagnosis">
             </button>
         </div>
@@ -218,7 +247,6 @@
                 scrollPadding: "100"
             });
 
-            // Hilangkan duplikat tombol jika ada
             intro.onafterchange(function () {
                 document.querySelectorAll('.introjs-tooltipbuttons button + button').forEach(b => b.remove());
             });

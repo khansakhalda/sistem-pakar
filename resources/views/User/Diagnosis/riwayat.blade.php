@@ -5,17 +5,17 @@
 @endpush
 
 @section('content')
-<div class="xs-pd-10-1 pd-ltr-10">
+<div class="xs-pd-10-1 pd-ltr-10 mb-5">
     <div class="page-header">
         <div class="row">
             <div class="col-md-12">
                 <div class="title">
-                    <h4 class="fw-bold" style="color: #ff9800;">Data Riwayat Diagnosis</h4>
+                    <h4 class="fw-bold" style="color: #007bff;">Data Riwayat Diagnosis</h4>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-white shadow-sm px-3 py-2 rounded">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
-                        <li class="breadcrumb-item active" style="color: #ff9800;" aria-current="page">Riwayat Pemeriksaan</li>
+                        <li class="breadcrumb-item active" style="color: #007bff;" aria-current="page">Riwayat Pemeriksaan</li>
                     </ol>
                 </nav>
             </div>
@@ -25,7 +25,7 @@
     <div class="card-box pd-20 mb-30 mt-3">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
-                <h5 class="fw-semibold" style="color: #ff9800;">Riwayat Pemeriksaan Penyakit</h5>
+                <h5 class="fw-semibold" style="color: #007bff;">Riwayat Pemeriksaan Penyakit</h5>
                 <p class="text-muted mb-0 small">Berikut merupakan riwayat hasil diagnosis yang pernah dilakukan</p>
             </div>
             @role('admin')
@@ -67,7 +67,7 @@
                             <td>{{ number_format($diagnosis->nilai_akhir, 2) . '%' }}</td>
                             <td>
                                 <a href="{{ route('diagnosis.show', $diagnosis->diagnosis_id) }}"
-                                   class="btn btn-sm btn-warning text-white rounded">
+                                   class="btn btn-sm text-white rounded" style="background-color: #ff9800;">
                                     <i class="bi bi-eye-fill"></i>
                                 </a>
                             </td>
@@ -79,8 +79,8 @@
                                 <div class="modal fade" id="hapusModal{{ $diagnosis->diagnosis_id }}" tabindex="-1" aria-labelledby="labelHapus{{ $diagnosis->diagnosis_id }}" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
-                                            <div class="modal-header" style="background-color: #ffc107; color: #212529;">
-                                                <h5 class="modal-title fw-bold" id="labelHapus{{ $diagnosis->diagnosis_id }}">Konfirmasi Penghapusan</h5>
+                                            <div class="modal-header" style="background-color: #007bff; color: #ffffff;">
+                                                <h5 class="modal-title fw-bold text-white" id="labelHapus{{ $diagnosis->diagnosis_id }}">Konfirmasi Penghapusan</h5>
                                                 <button type="button" class="btn text-white border-0" data-bs-dismiss="modal" aria-label="Tutup" style="font-size: 1.5rem;"><i class="bi bi-x-lg"></i></button>
                                             </div>
                                             <div class="modal-body">
@@ -110,7 +110,7 @@
 
     @role('admin')
     <div class="card-box pd-20 mt-3">
-        <h5 class="text-center fw-semibold" style="color: #ff9800;">Visualisasi Data Diagnosis</h5>
+        <h5 class="text-center fw-semibold" style="color: #007bff;">Visualisasi Data Diagnosis</h5>
         <div class="d-flex justify-content-center">
             <div style="max-width: 380px; width: 100%;">
                 <canvas id="chart8"></canvas>
@@ -124,8 +124,8 @@
 <div class="modal fade" id="hapusSemuaModal" tabindex="-1" aria-labelledby="hapusSemuaLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #ffc107; color: #212529;">
-        <h5 class="modal-title fw-bold" id="hapusSemuaLabel">Konfirmasi Penghapusan</h5>
+      <div class="modal-header" style="background-color: #007bff; color: #ffffff;">
+        <h5 class="modal-title fw-bold text-white" id="hapusSemuaLabel">Konfirmasi Penghapusan</h5>
         <button type="button" class="btn text-white border-0" data-bs-dismiss="modal" aria-label="Tutup" style="font-size: 1.5rem;"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="modal-body">
@@ -160,7 +160,7 @@
             datasets: [{
                 data: dataValues,
                 backgroundColor: [
-                    '#FF9800', '#E91E63', '#FFEB3B', '#C2185B', '#4CAF50',
+                    '#007bff', '#E91E63', '#FFEB3B', '#C2185B', '#4CAF50',
                     '#009688', '#FF7043', '#BDBDBD', '#8BC34A', '#9C27B0'
                 ],
                 borderColor: '#ffffff',

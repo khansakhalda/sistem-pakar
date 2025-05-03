@@ -24,498 +24,152 @@ class DatabaseSeeder extends Seeder
         // User::factory(1)->create();
 
         //Role Creation
-        Role::create(['name' => 'admin']);
-        Role::create(['name' => 'user']);
+        Role::firstOrCreate(['name' => 'admin']);
+        Role::firstOrCreate(['name' => 'user']);
 
-        $admin = User::create([
+        $admin = User::firstOrCreate([
             'name' => 'admin',
             'age' => '20',
             'number' => '085731013100',
             'email' => 'khansakhalda1604@gmail.com',
             'address' => 'Kediri',
             'email_verified_at' => now(),
-            'password' => Hash::make('adminkhansa'),
+            'password' => Hash::make('adminkhansa1'),
             'remember_token' => Str::random(10),
         ]);
 
-        $user = User::create([
+        $user = User::firstOrCreate([
             'name' => 'user',
             'age' => '20',
             'number' => '085731013101',
             'email' => 'khansa.khalda@mhs.unsoed.ac.id',
             'address' => 'Kediri',
             'email_verified_at' => now(),
-            'password' => Hash::make('userkhansa'),
+            'password' => Hash::make('userkhansa1'),
             'remember_token' => Str::random(10),
         ]);
 
         // Register Role  & Permission to Users
-        $admin->assignRole('admin');
-        $user->assignRole('user');
-
-
-
-
-        Desease::create([
-            'nama_penyakit' => 'Croup',
-            'detail_penyakit' => 'Croup adalah penyakit respiratorik serius pada anak-anak, umumnya menyerang usia 6 bulan hingga 3 tahun, dan jarang terjadi pada usia 3 bulan dan di atas 15 tahun. Penyebab utama croup adalah virus, dengan Human Parainfluenza Virus tipe I sebagai penyebab paling umum (75%). Virus lainnya termasuk Respiratory Syncytial Virus (RSV), metapneumovirus, virus influenza A dan B, adenovirus, dan coronavirus. Meski jarang, Mycoplasma pneumonia juga pernah ditemukan sebagai penyebab croupCroup adalah penyakit respiratorik serius pada anak-anak, umumnya menyerang usia 6 bulan hingga 3 tahun, dan jarang terjadi pada usia 3 bulan dan di atas 15 tahun. Penyebab utama croup adalah virus, dengan Human Parainfluenza Virus tipe I sebagai penyebab paling umum (75%). Virus lainnya termasuk Respiratory Syncytial Virus (RSV), metapneumovirus, virus influenza A dan B, adenovirus, dan coronavirus. Meski jarang, Mycoplasma pneumonia juga pernah ditemukan sebagai penyebab croup',
-            // 'solusi_penyakit' => 'Croup',
-        ]);
+        if (!$admin->hasRole('admin')) {
+    $admin->assignRole('admin');
+}
+if (!$user->hasRole('user')) {
+    $user->assignRole('user');
+}
 
         Desease::create([
-            'nama_penyakit' => 'Sinusitis Akut',
-            'detail_penyakit' => 'Sinusitis akut adalah infeksi pada sinus paranasal yang berlangsung kurang dari 30 hari. Kondisi ini ditandai dengan gejala yang menetap atau memburuk dalam jangka waktu singkat. Sinusitis akut dapat menyebabkan ketidaknyamanan dan mempengaruhi kualitas hidup, namun biasanya dapat sembuh dengan pengobatan yang tepat.',
-            // 'solusi_penyakit' => 'Sinusitis Akut',
-        ]);
+    'nama_penyakit' => 'Demam Berdarah Dengue (DBD)',
+    'detail_penyakit' => 'Demam Berdarah Dengue (DBD) adalah penyakit infeksi virus yang disebabkan oleh virus dengue yang masuk ke dalam tubuh manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus. Virus ini menyerang pembuluh darah dan sistem kekebalan tubuh, sehingga menyebabkan kebocoran pembuluh darah kapiler dan penurunan jumlah trombosit secara drastis. Proses infeksi dimulai ketika nyamuk yang telah menghisap darah seseorang yang terinfeksi virus dengue menggigit orang lain, lalu menyebarkan virus tersebut ke dalam aliran darah. Penyakit ini berkembang cepat dan dapat menyebabkan komplikasi serius seperti syok dan perdarahan internal jika tidak ditangani dengan cepat.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Malaria',
+    'detail_penyakit' => 'Malaria adalah penyakit menular yang disebabkan oleh parasit Plasmodium, yang ditularkan ke manusia melalui gigitan nyamuk Anopheles betina yang terinfeksi. Parasit ini masuk ke dalam aliran darah dan kemudian menyerang sel-sel hati untuk berkembang biak sebelum kembali ke aliran darah dan menginfeksi sel darah merah. Siklus infeksi ini menyebabkan gejala demam yang muncul secara berkala, bersamaan dengan menggigil, keringat berlebih, dan kelelahan. Parasit malaria merusak sel darah merah sehingga dapat menyebabkan anemia berat dan komplikasi berbahaya pada organ-organ vital.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Chikungunya',
+    'detail_penyakit' => 'Chikungunya merupakan penyakit virus yang ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus yang terinfeksi virus chikungunya. Setelah virus masuk ke dalam tubuh, sistem kekebalan tubuh merespons dengan peradangan yang menyebabkan demam tinggi dan nyeri sendi parah, terutama pada tangan, kaki, dan pergelangan. Virus ini menyerang jaringan sendi dan otot sehingga menyebabkan pembengkakan dan kekakuan yang bisa berlangsung berminggu-minggu atau bahkan berbulan-bulan. Meskipun tidak menyebabkan kematian, chikungunya dapat sangat mengganggu aktivitas sehari-hari.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Encephalitis',
+    'detail_penyakit' => 'Encephalitis atau radang otak adalah kondisi peradangan pada jaringan otak yang disebabkan oleh infeksi virus, salah satunya adalah virus ensefalitis Jepang. Virus ini ditularkan oleh nyamuk Culex yang telah membawa virus dari hewan perantara seperti babi atau burung. Setelah masuk ke dalam tubuh manusia melalui gigitan nyamuk, virus menyebar melalui aliran darah dan menyerang sistem saraf pusat, terutama otak. Hal ini menimbulkan gejala yang sangat serius seperti kejang, kebingungan, kehilangan kesadaran, dan bahkan koma. Encephalitis merupakan kondisi yang berpotensi fatal dan memerlukan penanganan medis intensif.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Zika',
+    'detail_penyakit' => 'Zika adalah penyakit yang disebabkan oleh virus Zika yang ditularkan melalui gigitan nyamuk Aedes aegypti. Setelah memasuki tubuh manusia, virus ini menyebar melalui darah dan memicu respons imun yang menyebabkan demam ringan, ruam, nyeri otot, dan konjungtivitis. Zika juga memiliki kemampuan menembus sawar darah-otak dan plasenta, sehingga berisiko tinggi bagi ibu hamil karena dapat menginfeksi janin. Infeksi Zika pada kehamilan awal dapat menyebabkan mikrosefali, yaitu kelainan perkembangan otak pada bayi yang menyebabkan ukuran kepala lebih kecil dari normal.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Filariasis',
+    'detail_penyakit' => 'Filariasis, atau yang lebih dikenal dengan sebutan kaki gajah, merupakan penyakit parasit kronis yang disebabkan oleh cacing filaria seperti Wuchereria bancrofti. Parasit ini masuk ke dalam tubuh manusia melalui gigitan nyamuk yang membawa larva cacing tersebut. Setelah masuk ke dalam tubuh, larva berkembang dan menetap di saluran limfatik (getah bening), menyebabkan penyumbatan dan peradangan kronis. Akibatnya, bagian tubuh seperti kaki, lengan, atau alat kelamin mengalami pembengkakan ekstrem yang berlangsung lama dan bersifat progresif. Penyakit ini bersifat menahun dan dapat menyebabkan disabilitas permanen jika tidak ditangani.',
+]);
+
+Desease::create([
+    'nama_penyakit' => 'Demam Kuning',
+    'detail_penyakit' => 'Demam Kuning adalah penyakit virus akut yang disebabkan oleh virus demam kuning dan ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti yang terinfeksi. Virus ini menyerang sel-sel hati, ginjal, dan jantung, sehingga menyebabkan kerusakan organ dan gangguan fungsi sistem tubuh. Setelah infeksi, penderita akan mengalami gejala awal seperti demam, nyeri otot, dan mual, kemudian memasuki fase toksik yang lebih serius seperti penyakit kuning (ikterus), perdarahan, dan kerusakan organ. Infeksi berat dari demam kuning dapat berakibat fatal jika tidak segera mendapatkan penanganan medis.',
+]);
+
+Indication::create(['nama_gejala' => 'Demam']);
+Indication::create(['nama_gejala' => 'Sakit kepala']);
+Indication::create(['nama_gejala' => 'Lemas dan lelah']);
+Indication::create(['nama_gejala' => 'Nafsu makan menurun']);
+Indication::create(['nama_gejala' => 'Mual dan muntah']);
+Indication::create(['nama_gejala' => 'Tubuh merasa dingin']);
+Indication::create(['nama_gejala' => 'Bintik merah pada kulit']);
+Indication::create(['nama_gejala' => 'Tubuh terasa sakit']);
+Indication::create(['nama_gejala' => 'Tubuh pegal linu']);
+Indication::create(['nama_gejala' => 'Sendi bengkak']);
+Indication::create(['nama_gejala' => 'Sakit tenggorokan saat menelan']);
+Indication::create(['nama_gejala' => 'Sakit perut']);
+Indication::create(['nama_gejala' => 'Nyeri otot']);
+Indication::create(['nama_gejala' => 'Stamina menurun']);
+Indication::create(['nama_gejala' => 'Denyut nadi terasa lemah']);
+Indication::create(['nama_gejala' => 'Nyeri sendi']);
+Indication::create(['nama_gejala' => 'Leher dan punggung terasa kaku']);
+Indication::create(['nama_gejala' => 'Mengantuk']);
+Indication::create(['nama_gejala' => 'Mudah terangsang kejang atau kaku']);
+Indication::create(['nama_gejala' => 'Mata merah']);
+Indication::create(['nama_gejala' => 'Ruam kulit']);
+Indication::create(['nama_gejala' => 'Nyeri dan pembengkakan pada area kelenjar getah bening']);
+
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G01', 'cf_pakar' => 0.8, 'mb_pakar' => 0.9, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G02', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G03', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G06', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G07', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G08', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G11', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G01', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G04', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G09', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G10', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G14', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G15', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G16', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G01', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G02', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G05', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G16', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G17', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G18', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G19', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
+
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G01', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G02', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G03', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G05', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G06', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G16', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G21', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
+
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G01', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G02', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G03', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G12', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G13', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G16', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G20', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G21', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G01', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G02', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G03', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G13', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G16', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G21', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G22', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
+
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G01', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G02', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G04', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G05', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G06', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
+Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G13', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
 
-        Desease::create([
-            'nama_penyakit' => 'Pertusis (Batuk Rejan)',
-            'detail_penyakit' => 'Batuk rejan (pertusis) merupakan infeksi bakteri pada saluran pernapasan yang sangat menular yang disebabkan oleh Bordetella pertussis. Penyakit ini merupakan penyebab utama kesakitan dan kematian di seluruh dunia, terutama pada bayi. Bordetella parapertussis juga dapat menyebabkan penyakit yang mirip dengan pertusis, meskipun biasanya tidak seberat itu. Gejala khas pertusis meliputi serangan batuk paroksismal yang disertai dengan suara teriakan dan muntah',
-            // 'solusi_penyakit' => 'Pertusis (Batuk Rejan)',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Bronchitis',
-            'detail_penyakit' => 'Bronkitis merupakan salah satu alasan yang sering menyebabkan kunjungan ke dokter. Penyakit ini biasanya disebabkan oleh virus, dengan durasi sekitar 1-3 minggu, yang umumnya terjadi pada orang dewasa yang sehat dengan batuk sebagai gejala utama. Selain batuk dan produksi dahak, bronkitis akut sering kali disertai dengan gejala saluran pernapasan bagian atas',
-            // 'solusi_penyakit' => 'Bronchitis',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Pneumonia',
-            'detail_penyakit' => 'Pneumonia adalah infeksi umum pada saluran pernapasan yang secara khusus mempengaruhi alveoli dan cabang-cabang bronkial terakhir di paru-paru. Infeksi ini dapat disebabkan oleh virus, bakteri, jamur, atau kombinasi dari mereka, yang mengakibatkan peradangan dan penumpukan cairan di jaringan paru-paru. Pneumonia merupakan salah satu penyebab utama tingkat keparahan dan kematian pada anak-anak di bawah usia 5 tahun secara global',
-            // 'solusi_penyakit' => 'Pneumonia',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Epiglotitis',
-            'detail_penyakit' => 'Epiglotitis merupakan inflamasi pada epiglotis, struktur yang terletak di belakang lidah dan terdiri dari tulang rawan serta berbentuk seperti flap. Biasanya, kondisi ini dipicu oleh infeksi bakteri atau trauma pada tenggorokan. Epiglotis berfungsi sebagai katup yang menutup batang tenggorokan saat menelan, mencegah makanan atau cairan masuk ke saluran pernapasan. Epiglotitis merupakan kondisi darurat yang membutuhkan penanganan segera',
-            // 'solusi_penyakit' => 'Epiglotitis',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Tonsilitis Akut',
-            'detail_penyakit' => 'Tonsilitis adalah kondisi inflamasi pada tonsil palatina, yang merupakan bagian dari cincin Waldeyer. Penularan infeksi dapat melalui udara (airborne droplets), kontak tangan, dan juga ciuman. Tonsilitis dapat terjadi pada semua rentang usia, namun lebih sering ditemukan pada anak-anak',
-            // 'solusi_penyakit' => 'Tonsilitis Akut',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Faringitis (Radang Tenggorokan)',
-            'detail_penyakit' => 'Faringitis merujuk pada infeksi atau peradangan di tenggorokan (faring), yang merupakan saluran yang menghubungkan hidung dan mulut ke paru-paru. Faringitis termasuk dalam kategori penyakit Infeksi Saluran Pernapasan Akut (ISPA), yang meliputi infeksi pada saluran pernapasan dengan durasi tidak lebih dari 14 hari. Faringitis menjadi penyebab 1-2% pasien yang mengunjungi poliklinik atau unit gawat darurat, dan diperkirakan bahwa setiap tahun terdapat 11-18 juta pasien yang mengunjungi layanan kesehatan akibat faringitis di Amerika Serikat',
-            // 'solusi_penyakit' => 'Faringitis (Radang Tenggorokan)',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Laringitis Akut',
-            'detail_penyakit' => 'Laringitis, juga dikenal sebagai peradangan pada organ laring, terjadi terutama pada pita suara. Kondisi ini ditandai dengan pembengkakan pada pita suara yang menyebabkan suara menjadi serak atau parau, sementara pembengkakan ini juga dapat mengganggu pernapasan dengan menghalangi aliran oksigen. Meskipun laringitis dapat sembuh sendiri dalam waktu 2-3 minggu, jika berlangsung lebih lama, dapat berkembang menjadi laringitis kronis. Biasanya, laringitis menyerang individu yang intens menggunakan suara mereka dalam aktivitas sehari-hari, seperti penyanyi, penyiar radio, atau MC
-',
-            // 'solusi_penyakit' => 'Laringitis Akut',
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Asma',
-            'detail_penyakit' => 'Asma adalah kondisi inflamasi kronis pada saluran napas yang melibatkan berbagai sel dan elemen di dalamnya. Inflamasi yang berkelanjutan menyebabkan peningkatan reaktivitas pada saluran napas, yang menghasilkan gejala episodik yang berulang seperti kesulitan bernapas, sensasi berat di dada, mengi, terutama terjadi pada malam hari atau siang hari',
-
-        ]);
-
-        Desease::create([
-            'nama_penyakit' => 'Common Cold',
-            'detail_penyakit' => '<p>Common cold adalah salah satu infeksi saluran pernapasan akut (ISPA) yang termasuk kategori nonspesifik atau "flu biasa". Penyakit ini disebabkan oleh virus dan menyerang saluran pernapasan akut, terutama hidung. Infeksi pernapasan akut yang paling banyak ditemukan adalah nasofaringitis atau common cold. Penyebabnya antara lain rhinovirus, influenza virus, adenovirus (ADV), enterovirus, dan parainfluenza viruses (PIV). Lebih dari 200 tipe rhinovirus telah ditemukan, dan infeksi ini terutama terjadi pada anak-anak di bawah usia 5 tahun.</p>',
-        ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'kesulitan bernafas',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'suara yang serak',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'suara batuk seperti monggong yang keras',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'suara kasar bernada tinggi saat menghirup nafas',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'mudah merasa kesal',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'tidak selera makan',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'bernafas melalui mulut',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'suara terdengar sengau',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'munculnya lendir berwarna kuning atau hijau dari hidung',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'mengeluarkan bunyi saat bernafas',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'muntah akibat rejan yang parah',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'tubuh menjadi memerah dan membiru (sianosis)',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'batuk berlangsung selama 5 hari atau lebih',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'keluar dahak bening, kuning, hijau atau putih',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'dada terasa sakit atau nyeri saat batuk',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'demam (suhu tubuh di atas 38 derajat Celsius)',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'hidung tersumbat',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'terasa sakit pada bagian perut saat batuk',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'tidak nafsu makan sehingga memicu dehidrasi',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Ngiler',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Nyeri tenggorokan',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Gangguan menelan',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Mengi, ditandai dengan suara terjepit seperti siulan ketika penderita bernapas',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Batuk kering dikarenakan lapisan pada paru-paru mengalami iritasi dan lendir yang muncul pada bronkial sulit dihilangkan',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Hypoxia atau kekurangan oksigen pada beberapa bagian tubuh, ditandai dengan kulit yang membiru dan rasa sakit pada atau di sekitar bagian tubuh yang kekurangan oksigen',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'jeda antara nafas yang berlangsung 20 detik atau lebih',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'nafas terengah-engah',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Tersedak',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'detak jantung lambat',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Dyspnea / Sesak Nafas (mungkin beraktivitas atau dengan istirahat, tergantung pada tingkat keparahan stenosis)',
-        // ]);
-
-        // Indication::create([
-        //     'nama_gejala' => 'Pneumonitis berulang',
-        // ]);
-
-        Indication::create([
-            'nama_gejala' => 'kesulitan bernafas',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'suara yang serak',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'suara batuk seperti monggong yang keras',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'suara kasar bernada tinggi saat menghirup nafas',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Bau Nafas Tidak Sedap',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Pilek Tidak Kunjung Membaik',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'bernafas melalui mulut',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'suara terdengar sengau',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'munculnya lendir berwarna kuning atau hijau dari hidung',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Nyeri Pada bagian wajah terutama ketika bertunduk',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'mengeluarkan bunyi saat bernafas',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'muntah akibat rejan yang parah',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'tubuh menjadi memerah dan membiru (sianosis)',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'batuk berlangsung selama 5 hari atau lebih',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'keluar dahak bening, kuning, hijau atau putih',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'dada terasa sakit atau nyeri saat batuk',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'demam (suhu tubuh di atas 38 derajat Celsius)',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Batuk',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Nafas cepat',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'terasa sakit pada bagian perut saat batuk',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'tidak nafsu makan sehingga memicu dehidrasi',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Ngiler',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Nyeri tenggorokan',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Gangguan menelan',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Sesak',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Nyeri Menelan',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Ngorok Saat Tidur',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Amandel Membesar',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Tenggorokan Berwarna Merah',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Suara Serak sampai Hilang',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Mengi, ditandai dengan suara terjepit seperti siulan ketika penderita bernapas',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'Ada Riwayat Alergi',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'bersin-bersin',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'sakit kepala',
-        ]);
-
-        Indication::create([
-            'nama_gejala' => 'badan terasa sakit dan tidak nyaman',
-        ]);
-
-        // // P01
-        // Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G01', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G02', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G03', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        // Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G04', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-
-        // // P02
-        // Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G05', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G06', 'cf_pakar' => 0.3, 'mb_pakar' => 0.4, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G07', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
-        // Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G08', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        // Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G09', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-
-        // // P03
-        // Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G01', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G10', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G11', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G12', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G16', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-
-        // // P04
-        // Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G13', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G14', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G15', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G16', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-
-        // // P05
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G13', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G16', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G17', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G01', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G18', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G19', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-
-        // // P06
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G20', 'cf_pakar' => 0.3, 'mb_pakar' => 0.4, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G21', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G22', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G04', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G02', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G16', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G12', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-
-        // // P07
-        // Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G23', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G01', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        // Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G24', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G15', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G25', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-
-        // // P08
-        // Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G26', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-        // Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G27', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G28', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G12', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G29', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-
-        // // P09
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G30', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G04', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G02', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G13', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G31', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        // Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G12', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-
-        Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G01', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G02', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G03', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P01', 'kode_gejala' => 'G04', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G05', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G06', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G07', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G08', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G09', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P02', 'kode_gejala' => 'G10', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G01', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G11', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G12', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G13', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G17', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P03', 'kode_gejala' => 'G18', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G14', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G15', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G16', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G17', 'cf_pakar' => 0.2, 'mb_pakar' => 0.3, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P04', 'kode_gejala' => 'G25', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G14', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G17', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0]);
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G19', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G20', 'cf_pakar' => 0.3, 'mb_pakar' => 0.4, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G21', 'cf_pakar' => 0.3, 'mb_pakar' => 0.4, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P05', 'kode_gejala' => 'G25', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G02', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G04', 'cf_pakar' => 0.4, 'mb_pakar' => 0.5, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G13', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G17', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G22', 'cf_pakar' => 0.3, 'mb_pakar' => 0.4, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G23', 'cf_pakar' => 0.7, 'mb_pakar' => 0.8, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P06', 'kode_gejala' => 'G24', 'cf_pakar' => 0.6, 'mb_pakar' => 0.7, 'md_pakar' => 0.1]);
-
-        Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G05', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G17', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G26', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G27', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P07', 'kode_gejala' => 'G28', 'cf_pakar' => 1.0, 'mb_pakar' => 1.0, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G17', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G26', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P08', 'kode_gejala' => 'G29', 'cf_pakar' => 0.8, 'mb_pakar' => 0.8, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G17', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G18', 'cf_pakar' => 0.5, 'mb_pakar' => 0.6, 'md_pakar' => 0.1]);
-        Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G26', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P09', 'kode_gejala' => 'G30', 'cf_pakar' => 1.0, 'mb_pakar' => 1.0, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P10', 'kode_gejala' => 'G18', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P10', 'kode_gejala' => 'G25', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P10', 'kode_gejala' => 'G31', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P10', 'kode_gejala' => 'G32', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G06', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G17', 'cf_pakar' => 0.5, 'mb_pakar' => 0.5, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G18', 'cf_pakar' => 0.7, 'mb_pakar' => 0.7, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G33', 'cf_pakar' => 0.9, 'mb_pakar' => 0.9, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G34', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
-        Rule::create(['kode_penyakit' => 'P11', 'kode_gejala' => 'G35', 'cf_pakar' => 0.6, 'mb_pakar' => 0.6, 'md_pakar' => 0.0]);
     }
 }

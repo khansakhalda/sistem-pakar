@@ -5,41 +5,88 @@
     .section-title {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #ff914d;
+        border-left: 5px solid #007bff;
+        padding-left: 15px;
+        margin-bottom: 1rem;
+        color: #333;
     }
+
     .highlight {
-        color: #ff914d;
+        background: #e3f2fd;
+        padding: 3px 6px;
+        border-radius: 4px;
+        color: #0056b3;
         font-weight: 600;
     }
+
     .disclaimer {
         font-size: 14px;
         color: #dc3545;
         background-color: #fef2f2;
-        border: 1px solid #f5c6cb;
-        padding: 12px;
-        border-radius: 5px;
-        margin-top: 25px;
+        border-left: 4px solid #f5c6cb;
+        padding: 14px;
+        border-radius: 6px;
+        margin-top: 30px;
     }
+
     .breadcrumb a,
     .breadcrumb .breadcrumb-item.active {
-        color: #ff914d;
+        color: #007bff;
         font-weight: 500;
         text-decoration: none;
     }
+
     .breadcrumb a:hover {
         text-decoration: underline;
     }
+
     .text-info-custom {
-        color: #ff914d;
+        color: #007bff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-custom {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .info-box {
+        background: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 1rem 1.2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .info-box:hover {
+        background: #e9f5ff;
+        transform: scale(1.01);
+    }
+
+    .info-box strong {
+        display: block;
+        color: #004085;
+        margin-bottom: 5px;
     }
 </style>
 
-<div class="page-header mb-3">
+<div class="page-header mb-4">
     <div class="row">
         <div class="col-md-12">
-            <h4 class="text-info-custom fw-bold mb-1">Tentang Aplikasi</h4>
-            <nav aria-label="breadcrumb" class="mt-2">
-                <ol class="breadcrumb bg-white rounded px-3 py-2 shadow-sm">
+            <h4 class="text-info-custom">Tentang Aplikasi</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-light rounded px-3 py-2 shadow-sm">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}" class="text-dark">Beranda</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Tentang Aplikasi</li>
                 </ol>
@@ -48,34 +95,70 @@
     </div>
 </div>
 
-<div class="card border-0 shadow-sm rounded-lg p-4 mb-5">
-    <h5 class="section-title mb-3">Apa itu SIDINYAM?</h5>
+<div class="card card-custom mb-5">
+    <h5 class="section-title">Apa itu SIDINYAM?</h5>
     <p>
-        <strong>SIDINYAM</strong> atau <span class="highlight">Sistem Informasi Diagnosa Penyakit Akibat Gigitan Nyamuk</span> adalah aplikasi cerdas yang dirancang untuk membantu masyarakat dalam mengenali gejala berbagai penyakit yang disebabkan oleh gigitan nyamuk.
+        <strong>SIDINYAM</strong> atau <span class="highlight">Sistem Informasi Diagnosa Penyakit Akibat Gigitan Nyamuk</span> adalah aplikasi berbasis web yang membantu masyarakat mengenali gejala penyakit akibat gigitan nyamuk secara cepat dan informatif.
     </p>
 
-    <h5 class="section-title mt-4 mb-2">Penyakit yang Dideteksi</h5>
-    <ul style="padding-left: 20px;">
-        <li><strong>Demam Berdarah Dengue (DBD)</strong>: Penyakit akibat virus dengue yang ditularkan oleh nyamuk Aedes aegypti. Gejala umumnya termasuk demam tinggi, nyeri otot, dan ruam.</li>
-        <li><strong>Malaria</strong>: Disebabkan oleh parasit Plasmodium dan ditularkan melalui nyamuk Anopheles. Gejalanya meliputi demam, menggigil, dan sakit kepala.</li>
-        <li><strong>Chikungunya</strong>: Virus yang menyebabkan demam dan nyeri sendi hebat. Biasanya dibawa oleh nyamuk Aedes.</li>
-        <li><strong>Encephalitis</strong>: Radang otak yang bisa disebabkan oleh virus yang dibawa oleh nyamuk. Dapat menimbulkan gangguan saraf serius.</li>
-        <li><strong>Zika</strong>: Infeksi virus Zika dapat menyebabkan gejala ringan tetapi berisiko tinggi pada ibu hamil karena berpotensi menyebabkan mikrosefali pada janin.</li>
-        <li><strong>Filariasis</strong>: Penyakit kronis akibat infeksi cacing filaria yang ditularkan melalui gigitan nyamuk, dapat menyebabkan pembengkakan ekstrem (elephantiasis).</li>
-        <li><strong>Demam Kuning</strong>: Infeksi virus akut yang menyebar lewat nyamuk dan ditandai dengan demam, sakit kuning, dan potensi kegagalan organ.</li>
-    </ul>
+    <h5 class="section-title">Penyakit yang Dideteksi</h5>
+    <div class="info-grid">
+        <div class="info-box">
+            <strong>Demam Berdarah Dengue (DBD)</strong>
+            Demam tinggi, nyeri otot, dan ruam karena virus dengue.
+        </div>
+        <div class="info-box">
+            <strong>Malaria</strong>
+            Demam dan menggigil akibat parasit Plasmodium lewat nyamuk Anopheles.
+        </div>
+        <div class="info-box">
+            <strong>Chikungunya</strong>
+            Demam dan nyeri sendi hebat karena virus chikungunya.
+        </div>
+        <div class="info-box">
+            <strong>Encephalitis</strong>
+            Radang otak serius karena virus yang dibawa nyamuk.
+        </div>
+        <div class="info-box">
+            <strong>Zika</strong>
+            Gejala ringan, tapi berisiko tinggi pada kehamilan.
+        </div>
+        <div class="info-box">
+            <strong>Filariasis</strong>
+            Infeksi cacing filaria yang bisa sebabkan pembengkakan ekstrem.
+        </div>
+        <div class="info-box">
+            <strong>Demam Kuning</strong>
+            Infeksi virus dengan gejala sakit kuning dan potensi gagal organ.
+        </div>
+    </div>
 
-    <h5 class="section-title mt-4 mb-2">Fitur Utama SIDINYAM</h5>
-    <ul style="padding-left: 20px;">
-        <li><strong>Deteksi Gejala</strong>: Mengidentifikasi potensi penyakit berdasarkan gejala yang diinput pengguna.</li>
-        <li><strong>Manajemen Pengguna</strong>: Registrasi, login, dan pengelolaan data pengguna oleh admin.</li>
-        <li><strong>Informasi Penyakit</strong>: Penjelasan detail tentang penyakit nyamuk, gejala, dan langkah pencegahan.</li>
-        <li><strong>Basis Pengetahuan</strong>: Data pakar yang digunakan dalam proses perhitungan diagnosa.</li>
-        <li><strong>Certainty Factor</strong>: Menampilkan tingkat keyakinan diagnosa secara kuantitatif.</li>
-    </ul>
+    <h5 class="section-title mt-4">Fitur Utama SIDINYAM</h5>
+    <div class="info-grid">
+        <div class="info-box">
+            <strong>Deteksi Gejala</strong>
+            Analisa awal penyakit berdasarkan gejala pengguna.
+        </div>
+        <div class="info-box">
+            <strong>Manajemen Pengguna</strong>
+            Pengelolaan akun dan data pengguna oleh admin.
+        </div>
+        <div class="info-box">
+            <strong>Informasi Penyakit</strong>
+            Penjelasan detail gejala, penyebab, dan pencegahan.
+        </div>
+        <div class="info-box">
+            <strong>Basis Pengetahuan</strong>
+            Data pakar sebagai landasan diagnosa sistem.
+        </div>
+        <div class="info-box">
+            <strong>Certainty Factor</strong>
+            Persentase keyakinan terhadap hasil diagnosa.
+        </div>
+    </div>
 
-    <p class="disclaimer">
-        <strong>Disclaimer:</strong> SIDINYAM memberikan hasil diagnosis berdasarkan gejala awal dan bukan pengganti pemeriksaan medis resmi. Konsultasikan dengan dokter untuk penanganan lebih lanjut.
+    <p class="disclaimer mt-4">
+        ⚠️<strong>Disclaimer:</strong> SIDINYAM memberikan hasil diagnosis berdasarkan gejala awal dan bukan pengganti pemeriksaan medis resmi. Konsultasikan dengan tenaga medis profesional untuk diagnosis yang lebih akurat.
     </p>
 </div>
 @endsection

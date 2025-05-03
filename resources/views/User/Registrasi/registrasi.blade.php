@@ -2,14 +2,18 @@
 
 @section('content')
 <style>
-    /* Warna teks dan link breadcrumb disamakan dengan oranye */
     .text-info-custom {
-        color: #ff914d; /* Warna oranye lembut */
+        color: #007bff;
     }
 
-    .breadcrumb .breadcrumb-item.active,
+    .breadcrumb .breadcrumb-item.active {
+        color: #007bff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
     .breadcrumb a {
-        color: #ff914d;
+        color: #000 !important; /* Hitam untuk Beranda */
         font-weight: 500;
         text-decoration: none;
     }
@@ -18,22 +22,25 @@
         text-decoration: underline;
     }
 
-    /* Ubah border input saat fokus jadi oranye */
     .form-control:focus {
-        border-color: #ff914d;
-        box-shadow: 0 0 0 0.2rem rgba(255, 145, 77, 0.25);
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
 
-    /* Tombol oranye */
     .btn-orange {
-        background-color: #ff914d;
+        background-color: #007bff;
         color: white;
         border: none;
     }
 
     .btn-orange:hover {
-        background-color: #e67d3e;
+        background-color: #0056b3;
         color: white;
+    }
+
+    /* Tambahan agar tidak terlalu mepet dengan footer */
+    .card {
+        margin-bottom: 20px;
     }
 </style>
 
@@ -57,7 +64,6 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        {{-- Nama --}}
         <div class="form-group mb-3">
             <label for="name" class="font-weight-semibold">Nama Lengkap</label>
             <input type="text" id="name" name="name" value="{{ old('name') }}"
@@ -67,7 +73,6 @@
             @enderror
         </div>
 
-        {{-- Usia --}}
         <div class="form-group mb-3">
             <label for="age">Usia</label>
             <input type="text" id="age" name="age" value="{{ old('age') }}"
@@ -77,7 +82,6 @@
             @enderror
         </div>
 
-        {{-- Nomor HP --}}
         <div class="form-group mb-3">
             <label for="number">Nomor HP</label>
             <input type="text" id="number" name="number" value="{{ old('number') }}"
@@ -87,7 +91,6 @@
             @enderror
         </div>
 
-        {{-- Email --}}
         <div class="form-group mb-3">
             <label for="email">Alamat Email</label>
             <input type="email" id="email" name="email" value="{{ old('email') }}"
@@ -97,7 +100,6 @@
             @enderror
         </div>
 
-        {{-- Alamat --}}
         <div class="form-group mb-3">
             <label for="address">Alamat Tempat Tinggal</label>
             <input type="text" id="address" name="address" value="{{ old('address') }}"
@@ -107,7 +109,6 @@
             @enderror
         </div>
 
-        {{-- Password --}}
         <div class="form-group mb-3">
             <label for="password">Kata Sandi</label>
             <input type="password" id="password" name="password"
@@ -117,7 +118,6 @@
             @enderror
         </div>
 
-        {{-- Konfirmasi Password --}}
         <div class="form-group mb-4">
             <label for="password_confirmation">Ulangi Kata Sandi</label>
             <input type="password" id="password_confirmation" name="password_confirmation"
@@ -127,7 +127,6 @@
             @enderror
         </div>
 
-        {{-- Tombol Submit --}}
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-orange rounded-pill px-4 py-2">
                 Daftar Sekarang

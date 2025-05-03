@@ -2,14 +2,14 @@
 
 @section('content')
     <style>
-        .btn-orange {
-            background-color: #ff914d;
+        .btn-blue {
+            background-color: #0d6efd;
             color: white;
             border: none;
         }
 
-        .btn-orange:hover {
-            background-color: #ff7b2d;
+        .btn-blue:hover {
+            background-color: #0b5ed7;
             color: white;
         }
     </style>
@@ -79,7 +79,7 @@
 
                 @role('user')
                     <div class="flex justify-center pt-2 pb-4 text-center" style="margin-top: -1rem">
-                        <a href={{ route('diagnosis.index') }} class="btn btn-orange">
+                        <a href={{ route('diagnosis.index') }} class="btn btn-blue">
                             Cek Kondisi Anda Sekarang!
                         </a>
                     </div>

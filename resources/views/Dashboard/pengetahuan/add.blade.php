@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="title">
-                <h4 class="fw-bold" style="color: #ff9800;">Tambah Basis Pengetahuan</h4>
+                <h4 class="fw-bold" style="color: #0d6efd;">Tambah Basis Pengetahuan</h4>
             </div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white px-3 py-2 shadow-sm rounded">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Beranda</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('pengetahuan.index') }}">Pengetahuan</a></li>
-                    <li class="breadcrumb-item active" style="color: #ff9800;" aria-current="page">Tambah</li>
+                    <li class="breadcrumb-item active" style="color: #0d6efd;" aria-current="page">Tambah</li>
                 </ol>
             </nav>
         </div>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="card-box pd-20 mb-30 mt-3">
-    <h5 class="fw-semibold mb-4" style="color: #ff9800;">Form Tambah Pengetahuan</h5>
+    <h5 class="fw-semibold mb-4" style="color: #0d6efd;">Form Tambah Pengetahuan</h5>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -86,9 +86,18 @@
             </div>
         </div>
     </form>
-</div> <!-- Akhir dari card-box -->
-
+</div>
 @endsection
+
+@push('styles')
+<style>
+    select.form-control {
+        padding-right: 1.8rem !important; /* kurangi padding agar icon lebih ke kiri */
+        background-position: right 0.8rem center !important; /* geser ikon lebih ke kiri */
+    }
+</style>
+@endpush
+
 
 @push('scripts')
 <script>
