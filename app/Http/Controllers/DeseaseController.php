@@ -2,80 +2,83 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\DeseaseRequest;
-use App\Models\Desease;
-use App\Services\Desease\DeseaseService;
+use App\Http\Requests\DeseaseRequest; // Import request khusus yang berisi validasi data penyakit
+use App\Models\Desease; // Model penyakit
+use App\Services\Desease\DeseaseService; // Service yang menangani logika bisnis penyakit
 use Illuminate\Http\Request;
 
 class DeseaseController extends Controller
 {
-
+    // Dependency injection: service akan otomatis tersedia untuk semua method controller ini
     public function __construct(private DeseaseService $service)
     {
     }
     /**
-     * Display a listing of the resource.
+     * Menampilkan daftar semua penyakit
      */
     public function index()
     {
-        $data = $this->service->getAll();
-        return view('Dashboard.penyakit.penyakit', ['data' => $data]);
+        $data = $this->service->getAll(); // Ambil semua data penyakit dari service
+        return view('Dashboard.penyakit.penyakit', ['data' => $data]); // Tampilkan di view
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Menampilkan form tambah penyakit
      */
     public function create()
     {
-        return view('Dashboard.penyakit.add');
+        return view('Dashboard.penyakit.add'); // Arahkan ke halaman form tambah
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Menyimpan data penyakit baru
      */
     public function store(DeseaseRequest $request)
     {
-        $stmt = $this->service->store($request);
+        $stmt = $this->service->store($request); // Simpan data lewat service
         if ($stmt) {
+            // Jika berhasil, arahkan ke halaman daftar penyakit
             return redirect('dashboard/penyakit')->with(['success' => 'Tambah Berhasil']);
         } else {
+            // Jika gagal, debug input yang dikirim
             dd($request);
         }
     }
 
     /**
-     * Display the specified resource.
+     * Menampilkan detail penyakit tertentu (belum digunakan)
      */
     public function show(Desease $desease)
     {
+        // Kosong
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Menampilkan form edit penyakit
      */
     public function edit($id)
     {
-        $data = $this->service->find($id);
-        return view('Dashboard.penyakit.edit',  ['data' => $data[0]]);
+        $data = $this->service->find($id); // Cari data berdasarkan ID
+        return view('Dashboard.penyakit.edit',  ['data' => $data[0]]); // Kirim data ke form edit
     }
 
     /**
-     * Update the specified resource in storage.
+     * Memperbarui data penyakit berdasarkan ID
      */
     public function update(DeseaseRequest $request, $id)
     {
-        $stmt = $this->service->update($request, $id);
+        $stmt = $this->service->update($request, $id); // Update data lewat service
         if ($stmt) {
             return redirect('dashboard/penyakit')->with(['success' => 'Edit Berhasil']);
         }
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Menghapus data penyakit berdasarkan ID
      */
     public function destroy($id)
     {
-        $this->service->destroy($id);
+        $this->service->destroy($id); // Hapus data lewat service
         return redirect('dashboard/penyakit')->with(['success' => 'Hapus Berhasil']);
     }
 }

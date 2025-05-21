@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ $data->nama_pengguna }}_{{ substr($data->created_at, 0, 10) }}</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/vendors/images/uniska.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/vendors/images/nyamuk.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
     body {

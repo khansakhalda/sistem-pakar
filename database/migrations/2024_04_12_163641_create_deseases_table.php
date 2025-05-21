@@ -15,7 +15,6 @@ return new class extends Migration
             $table->string('kode_penyakit')->primary();
             $table->string('nama_penyakit');
             $table->text('detail_penyakit');
-            // $table->text('solusi_penyakit');
             $table->timestamps();
         });
     }

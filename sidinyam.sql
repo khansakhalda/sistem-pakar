@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Bulan Mei 2025 pada 07.34
+-- Waktu pembuatan: 21 Bulan Mei 2025 pada 16.01
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ispa`
+-- Database: `sidinyam`
 --
 
 -- --------------------------------------------------------
@@ -64,13 +64,13 @@ CREATE TABLE `deseases` (
 --
 
 INSERT INTO `deseases` (`kode_penyakit`, `nama_penyakit`, `detail_penyakit`, `created_at`, `updated_at`) VALUES
-('P01', 'Demam Berdarah Dengue (DBD)', 'Demam Berdarah Dengue (DBD) adalah penyakit infeksi virus yang disebabkan oleh virus dengue yang masuk ke dalam tubuh manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus. Virus ini menyerang pembuluh darah dan sistem kekebalan tubuh, sehingga menyebabkan kebocoran pembuluh darah kapiler dan penurunan jumlah trombosit secara drastis. Proses infeksi dimulai ketika nyamuk yang telah menghisap darah seseorang yang terinfeksi virus dengue menggigit orang lain, lalu menyebarkan virus tersebut ke dalam aliran darah. Penyakit ini berkembang cepat dan dapat menyebabkan komplikasi serius seperti syok dan perdarahan internal jika tidak ditangani dengan cepat.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P02', 'Malaria', 'Malaria adalah penyakit menular yang disebabkan oleh parasit Plasmodium, yang ditularkan ke manusia melalui gigitan nyamuk Anopheles betina yang terinfeksi. Parasit ini masuk ke dalam aliran darah dan kemudian menyerang sel-sel hati untuk berkembang biak sebelum kembali ke aliran darah dan menginfeksi sel darah merah. Siklus infeksi ini menyebabkan gejala demam yang muncul secara berkala, bersamaan dengan menggigil, keringat berlebih, dan kelelahan. Parasit malaria merusak sel darah merah sehingga dapat menyebabkan anemia berat dan komplikasi berbahaya pada organ-organ vital.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P03', 'Chikungunya', 'Chikungunya merupakan penyakit virus yang ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus yang terinfeksi virus chikungunya. Setelah virus masuk ke dalam tubuh, sistem kekebalan tubuh merespons dengan peradangan yang menyebabkan demam tinggi dan nyeri sendi parah, terutama pada tangan, kaki, dan pergelangan. Virus ini menyerang jaringan sendi dan otot sehingga menyebabkan pembengkakan dan kekakuan yang bisa berlangsung berminggu-minggu atau bahkan berbulan-bulan. Meskipun tidak menyebabkan kematian, chikungunya dapat sangat mengganggu aktivitas sehari-hari.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P04', 'Encephalitis', 'Encephalitis atau radang otak adalah kondisi peradangan pada jaringan otak yang disebabkan oleh infeksi virus, salah satunya adalah virus ensefalitis Jepang. Virus ini ditularkan oleh nyamuk Culex yang telah membawa virus dari hewan perantara seperti babi atau burung. Setelah masuk ke dalam tubuh manusia melalui gigitan nyamuk, virus menyebar melalui aliran darah dan menyerang sistem saraf pusat, terutama otak. Hal ini menimbulkan gejala yang sangat serius seperti kejang, kebingungan, kehilangan kesadaran, dan bahkan koma. Encephalitis merupakan kondisi yang berpotensi fatal dan memerlukan penanganan medis intensif.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P05', 'Zika', 'Zika adalah penyakit yang disebabkan oleh virus Zika yang ditularkan melalui gigitan nyamuk Aedes aegypti. Setelah memasuki tubuh manusia, virus ini menyebar melalui darah dan memicu respons imun yang menyebabkan demam ringan, ruam, nyeri otot, dan konjungtivitis. Zika juga memiliki kemampuan menembus sawar darah-otak dan plasenta, sehingga berisiko tinggi bagi ibu hamil karena dapat menginfeksi janin. Infeksi Zika pada kehamilan awal dapat menyebabkan mikrosefali, yaitu kelainan perkembangan otak pada bayi yang menyebabkan ukuran kepala lebih kecil dari normal.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P06', 'Filariasis', 'Filariasis, atau yang lebih dikenal dengan sebutan kaki gajah, merupakan penyakit parasit kronis yang disebabkan oleh cacing filaria seperti Wuchereria bancrofti. Parasit ini masuk ke dalam tubuh manusia melalui gigitan nyamuk yang membawa larva cacing tersebut. Setelah masuk ke dalam tubuh, larva berkembang dan menetap di saluran limfatik (getah bening), menyebabkan penyumbatan dan peradangan kronis. Akibatnya, bagian tubuh seperti kaki, lengan, atau alat kelamin mengalami pembengkakan ekstrem yang berlangsung lama dan bersifat progresif. Penyakit ini bersifat menahun dan dapat menyebabkan disabilitas permanen jika tidak ditangani.', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('P07', 'Demam Kuning', 'Demam Kuning adalah penyakit virus akut yang disebabkan oleh virus demam kuning dan ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti yang terinfeksi. Virus ini menyerang sel-sel hati, ginjal, dan jantung, sehingga menyebabkan kerusakan organ dan gangguan fungsi sistem tubuh. Setelah infeksi, penderita akan mengalami gejala awal seperti demam, nyeri otot, dan mual, kemudian memasuki fase toksik yang lebih serius seperti penyakit kuning (ikterus), perdarahan, dan kerusakan organ. Infeksi berat dari demam kuning dapat berakibat fatal jika tidak segera mendapatkan penanganan medis.', '2025-05-02 22:26:36', '2025-05-02 22:26:36');
+('P01', 'Demam Berdarah Dengue (DBD)', '<p>Demam Berdarah Dengue (DBD) adalah penyakit infeksi virus yang disebabkan oleh virus dengue yang masuk ke dalam tubuh manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus. Virus ini menyerang pembuluh darah dan sistem kekebalan tubuh, sehingga menyebabkan kebocoran pembuluh darah kapiler dan penurunan jumlah trombosit secara drastis. Proses infeksi dimulai ketika nyamuk yang telah menghisap darah seseorang yang terinfeksi virus dengue menggigit orang lain, lalu menyebarkan virus tersebut ke dalam aliran darah. Penyakit ini berkembang cepat dan dapat menyebabkan komplikasi serius seperti syok dan perdarahan internal jika tidak ditangani dengan cepat.</p>', '2025-05-20 07:21:05', '2025-05-20 07:24:07'),
+('P02', 'Malaria', 'Malaria adalah penyakit menular yang disebabkan oleh parasit Plasmodium, yang ditularkan ke manusia melalui gigitan nyamuk Anopheles betina yang terinfeksi. Parasit ini masuk ke dalam aliran darah dan kemudian menyerang sel-sel hati untuk berkembang biak sebelum kembali ke aliran darah dan menginfeksi sel darah merah. Siklus infeksi ini menyebabkan gejala demam yang muncul secara berkala, bersamaan dengan menggigil, keringat berlebih, dan kelelahan. Parasit malaria merusak sel darah merah sehingga dapat menyebabkan anemia berat dan komplikasi berbahaya pada organ-organ vital.', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('P03', 'Chikungunya', 'Chikungunya merupakan penyakit virus yang ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti atau Aedes albopictus yang terinfeksi virus chikungunya. Setelah virus masuk ke dalam tubuh, sistem kekebalan tubuh merespons dengan peradangan yang menyebabkan demam tinggi dan nyeri sendi parah, terutama pada tangan, kaki, dan pergelangan. Virus ini menyerang jaringan sendi dan otot sehingga menyebabkan pembengkakan dan kekakuan yang bisa berlangsung berminggu-minggu atau bahkan berbulan-bulan. Meskipun tidak menyebabkan kematian, chikungunya dapat sangat mengganggu aktivitas sehari-hari.', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('P04', 'Encephalitis', 'Encephalitis atau radang otak adalah kondisi peradangan pada jaringan otak yang disebabkan oleh infeksi virus, salah satunya adalah virus ensefalitis Jepang. Virus ini ditularkan oleh nyamuk Culex yang telah membawa virus dari hewan perantara seperti babi atau burung. Setelah masuk ke dalam tubuh manusia melalui gigitan nyamuk, virus menyebar melalui aliran darah dan menyerang sistem saraf pusat, terutama otak. Hal ini menimbulkan gejala yang sangat serius seperti kejang, kebingungan, kehilangan kesadaran, dan bahkan koma. Encephalitis merupakan kondisi yang berpotensi fatal dan memerlukan penanganan medis intensif.', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('P05', 'Zika', 'Zika adalah penyakit yang disebabkan oleh virus Zika yang ditularkan melalui gigitan nyamuk Aedes aegypti. Setelah memasuki tubuh manusia, virus ini menyebar melalui darah dan memicu respons imun yang menyebabkan demam ringan, ruam, nyeri otot, dan konjungtivitis. Zika juga memiliki kemampuan menembus sawar darah-otak dan plasenta, sehingga berisiko tinggi bagi ibu hamil karena dapat menginfeksi janin. Infeksi Zika pada kehamilan awal dapat menyebabkan mikrosefali, yaitu kelainan perkembangan otak pada bayi yang menyebabkan ukuran kepala lebih kecil dari normal.', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('P06', 'Filariasis', 'Filariasis, atau yang lebih dikenal dengan sebutan kaki gajah, merupakan penyakit parasit kronis yang disebabkan oleh cacing filaria seperti Wuchereria bancrofti. Parasit ini masuk ke dalam tubuh manusia melalui gigitan nyamuk yang membawa larva cacing tersebut. Setelah masuk ke dalam tubuh, larva berkembang dan menetap di saluran limfatik (getah bening), menyebabkan penyumbatan dan peradangan kronis. Akibatnya, bagian tubuh seperti kaki, lengan, atau alat kelamin mengalami pembengkakan ekstrem yang berlangsung lama dan bersifat progresif. Penyakit ini bersifat menahun dan dapat menyebabkan disabilitas permanen jika tidak ditangani.', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('P07', 'Demam Kuning', 'Demam Kuning adalah penyakit virus akut yang disebabkan oleh virus demam kuning dan ditularkan ke manusia melalui gigitan nyamuk Aedes aegypti yang terinfeksi. Virus ini menyerang sel-sel hati, ginjal, dan jantung, sehingga menyebabkan kerusakan organ dan gangguan fungsi sistem tubuh. Setelah infeksi, penderita akan mengalami gejala awal seperti demam, nyeri otot, dan mual, kemudian memasuki fase toksik yang lebih serius seperti penyakit kuning (ikterus), perdarahan, dan kerusakan organ. Infeksi berat dari demam kuning dapat berakibat fatal jika tidak segera mendapatkan penanganan medis.', '2025-05-20 07:21:05', '2025-05-20 07:21:05');
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE `diagnoses` (
 --
 
 INSERT INTO `diagnoses` (`diagnosis_id`, `nama_pengguna`, `age`, `kode_pengguna`, `alamat_pengguna`, `kode_penyakit`, `nilai_akhir`, `hasil`, `gejala`, `created_at`, `updated_at`) VALUES
-('DGS-2025050314Y', 'admin', 20, 1, 'Kediri', 'P01', 86, '[{\"kode_penyakit\":\"P01\",\"nama_penyakit\":\"Demam Berdarah Dengue (DBD)\",\"nilai\":86.00000000000001},{\"kode_penyakit\":\"P04\",\"nama_penyakit\":\"Encephalitis\",\"nilai\":70},{\"kode_penyakit\":\"P07\",\"nama_penyakit\":\"Demam Kuning\",\"nilai\":70}]', '[{\"kode_gejala\":\"G06\",\"nama_gejala\":\"Tubuh merasa dingin\",\"nilai_cf\":1,\"deskripsi\":\"Sangat Sering \\/ Selalu \\/ Iya\"},{\"kode_gejala\":\"G07\",\"nama_gejala\":\"Bintik merah pada kulit\",\"nilai_cf\":0.8,\"deskripsi\":\"Hampir Selalu\"}]', '2025-05-02 22:28:29', '2025-05-02 22:28:29');
+('DGS-20250520LMD', 'admin', 20, 1, 'Kediri', 'P01', 60, '[{\"kode_penyakit\":\"P01\",\"nama_penyakit\":\"Demam Berdarah Dengue (DBD)\",\"nilai\":60},{\"kode_penyakit\":\"P02\",\"nama_penyakit\":\"Malaria\",\"nilai\":0},{\"kode_penyakit\":\"P03\",\"nama_penyakit\":\"Chikungunya\",\"nilai\":6},{\"kode_penyakit\":\"P05\",\"nama_penyakit\":\"Zika\",\"nilai\":10},{\"kode_penyakit\":\"P06\",\"nama_penyakit\":\"Filariasis\",\"nilai\":20},{\"kode_penyakit\":\"P07\",\"nama_penyakit\":\"Demam Kuning\",\"nilai\":42.6}]', '[{\"kode_gejala\":\"G04\",\"nama_gejala\":\"Nafsu makan menurun\",\"nilai_cf\":0.6,\"deskripsi\":\"Sering\"},{\"kode_gejala\":\"G06\",\"nama_gejala\":\"Tubuh merasa dingin\",\"nilai_cf\":0,\"deskripsi\":\"Tidak Pernah Mengalami\"},{\"kode_gejala\":\"G08\",\"nama_gejala\":\"Seluruh tubuh terasa sakit\",\"nilai_cf\":0.6,\"deskripsi\":\"Sering\"},{\"kode_gejala\":\"G13\",\"nama_gejala\":\"Otot terasa sakit dan kaku saat disentuh\",\"nilai_cf\":0.2,\"deskripsi\":\"Tidak Yakin \\/ Tidak Tahu\"}]', '2025-05-20 07:23:01', '2025-05-20 07:23:01');
 
 -- --------------------------------------------------------
 
@@ -133,28 +133,28 @@ CREATE TABLE `indications` (
 --
 
 INSERT INTO `indications` (`kode_gejala`, `nama_gejala`, `created_at`, `updated_at`) VALUES
-('G01', 'Demam', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G02', 'Sakit kepala', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G03', 'Lemas dan lelah', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G04', 'Nafsu makan menurun', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G05', 'Mual dan muntah', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G06', 'Tubuh merasa dingin', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G07', 'Bintik merah pada kulit', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G08', 'Tubuh terasa sakit', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G09', 'Tubuh pegal linu', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G10', 'Sendi bengkak', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G11', 'Sakit tenggorokan saat menelan', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G12', 'Sakit perut', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G13', 'Nyeri otot', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G14', 'Stamina menurun', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G15', 'Denyut nadi terasa lemah', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G16', 'Nyeri sendi', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G17', 'Leher dan punggung terasa kaku', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G18', 'Mengantuk', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G19', 'Mudah terangsang kejang atau kaku', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G20', 'Mata merah', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G21', 'Ruam kulit', '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-('G22', 'Nyeri dan pembengkakan pada area kelenjar getah bening', '2025-05-02 22:26:36', '2025-05-02 22:26:36');
+('G01', 'Demam', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G02', 'Sakit kepala', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G03', 'Lemas dan lelah', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G04', 'Nafsu makan menurun', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G05', 'Mual dan muntah', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G06', 'Tubuh merasa dingin', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G07', 'Bintik merah pada kulit', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G08', 'Seluruh tubuh terasa sakit', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G09', 'Tubuh pegal linu', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G10', 'Sendi bengkak', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G11', 'Sakit tenggorokan saat menelan', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G12', 'Sakit perut', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G13', 'Otot terasa sakit dan kaku saat disentuh', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G14', 'Stamina menurun', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G15', 'Denyut nadi terasa lemah', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G16', 'Sendi terasa nyeri terutama saat digerakkan', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G17', 'Leher dan punggung terasa kaku', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G18', 'Mengantuk', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G19', 'Mudah terangsang kejang atau kaku', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G20', 'Mata merah', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G21', 'Ruam kulit', '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+('G22', 'Nyeri dan pembengkakan pada area kelenjar getah bening', '2025-05-20 07:21:05', '2025-05-20 07:21:05');
 
 -- --------------------------------------------------------
 
@@ -294,8 +294,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'web', '2025-05-02 22:26:35', '2025-05-02 22:26:35'),
-(2, 'user', 'web', '2025-05-02 22:26:35', '2025-05-02 22:26:35');
+(1, 'admin', 'web', '2025-05-20 07:21:04', '2025-05-20 07:21:04'),
+(2, 'user', 'web', '2025-05-20 07:21:04', '2025-05-20 07:21:04');
 
 -- --------------------------------------------------------
 
@@ -330,55 +330,54 @@ CREATE TABLE `rules` (
 --
 
 INSERT INTO `rules` (`kode_pengetahuan`, `kode_gejala`, `kode_penyakit`, `cf_pakar`, `mb_pakar`, `md_pakar`, `created_at`, `updated_at`) VALUES
-(1, 'G01', 'P01', 0.8, 0.9, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(2, 'G02', 'P01', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(3, 'G03', 'P01', 0.6, 0.7, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(4, 'G06', 'P01', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(5, 'G07', 'P01', 0.9, 0.9, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(6, 'G08', 'P01', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(7, 'G11', 'P01', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(8, 'G01', 'P02', 0.7, 0.8, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(9, 'G04', 'P02', 0.6, 0.7, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(10, 'G09', 'P02', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(11, 'G10', 'P02', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(12, 'G14', 'P02', 0.5, 0.5, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(13, 'G15', 'P02', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(14, 'G16', 'P02', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(15, 'G01', 'P03', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(16, 'G02', 'P03', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(17, 'G05', 'P03', 0.6, 0.7, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(18, 'G16', 'P03', 0.7, 0.8, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(19, 'G17', 'P03', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(20, 'G18', 'P03', 0.5, 0.5, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(21, 'G19', 'P03', 0.4, 0.5, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(22, 'G01', 'P04', 0.7, 0.8, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(23, 'G02', 'P04', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(24, 'G03', 'P04', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(25, 'G05', 'P04', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(26, 'G06', 'P04', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(27, 'G16', 'P04', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(28, 'G21', 'P04', 0.4, 0.5, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(29, 'G01', 'P05', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(30, 'G02', 'P05', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(31, 'G03', 'P05', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(32, 'G12', 'P05', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(33, 'G13', 'P05', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(34, 'G16', 'P05', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(35, 'G20', 'P05', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(36, 'G21', 'P05', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(37, 'G01', 'P06', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(38, 'G02', 'P06', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(39, 'G03', 'P06', 0.4, 0.5, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(40, 'G13', 'P06', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(41, 'G16', 'P06', 0.7, 0.8, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(42, 'G21', 'P06', 0.5, 0.5, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(43, 'G22', 'P06', 0.6, 0.7, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(44, 'G01', 'P07', 0.8, 0.8, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(45, 'G02', 'P07', 0.6, 0.6, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(46, 'G04', 'P07', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(47, 'G05', 'P07', 0.5, 0.6, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(48, 'G06', 'P07', 0.7, 0.7, 0, '2025-05-02 22:26:36', '2025-05-02 22:26:36'),
-(49, 'G13', 'P07', 0.7, 0.8, 0.1, '2025-05-02 22:26:36', '2025-05-02 22:26:36');
+(1, 'G01', 'P01', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(2, 'G02', 'P01', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(3, 'G03', 'P01', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(4, 'G06', 'P01', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(5, 'G07', 'P01', 0.4, 0.4, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(6, 'G08', 'P01', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(7, 'G11', 'P01', 0, 0, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(8, 'G01', 'P02', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(9, 'G02', 'P02', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(10, 'G03', 'P02', 0.5, 0.5, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(11, 'G05', 'P02', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(12, 'G06', 'P02', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(13, 'G16', 'P02', 0.1, 0.1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(14, 'G01', 'P03', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(15, 'G04', 'P03', 0.1, 0.1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(16, 'G09', 'P03', 0.8, 0.9, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(17, 'G10', 'P03', 0, 0, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(18, 'G14', 'P03', 0.4, 0.4, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(19, 'G15', 'P03', 0, 0, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(20, 'G16', 'P03', 0.8, 0.9, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(21, 'G01', 'P04', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(22, 'G02', 'P04', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(23, 'G05', 'P04', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(24, 'G16', 'P04', 0.1, 0.1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(25, 'G17', 'P04', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(26, 'G18', 'P04', 0.2, 0.2, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(27, 'G19', 'P04', 0.4, 0.4, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(28, 'G01', 'P05', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(29, 'G02', 'P05', 0.5, 0.6, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(30, 'G03', 'P05', 0.4, 0.5, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(31, 'G12', 'P05', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(32, 'G13', 'P05', 0.5, 0.6, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(33, 'G16', 'P05', 0.6, 0.6, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(34, 'G20', 'P05', 0.9, 0.9, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(35, 'G21', 'P05', 0.6, 0.7, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(36, 'G01', 'P06', 0.7, 0.7, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(37, 'G02', 'P06', 0.5, 0.6, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(38, 'G03', 'P06', 0.4, 0.5, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(39, 'G13', 'P06', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(40, 'G16', 'P06', 0.9, 0.9, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(41, 'G21', 'P06', 0.4, 0.5, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(42, 'G22', 'P06', 0.8, 0.8, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(43, 'G01', 'P07', 1, 1, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(44, 'G02', 'P07', 0.7, 0.7, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(45, 'G04', 'P07', 0.5, 0.6, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(46, 'G05', 'P07', 0.5, 0.6, 0.1, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(47, 'G06', 'P07', 0.7, 0.7, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05'),
+(48, 'G13', 'P07', 0.9, 0.9, 0, '2025-05-20 07:21:05', '2025-05-20 07:21:05');
 
 -- --------------------------------------------------------
 
@@ -400,7 +399,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('ogIfrcd4Zc6tXArCVMoZAVSyrkJHKX9BiiuHolIO', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoib3FEVDYwdHBZWkdmMlk4OWQ3b09FNHlBUjh0YW9lUkhmcHRyUUlHQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jZXRhay1kaWFnbm9zaXMvREdTLTIwMjUwNTAzMTRZIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1746250217);
+('NqM7ECqaNJrSGgjKbDQNbTioEPWwfffZA3oIyArM', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoib3gwbzg3aHV2RjRUNE91aGw0cTBPQzV1TXc2NUo4a095aWNCRWhVSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQvcGVueWFraXQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1747751051);
 
 -- --------------------------------------------------------
 
@@ -427,8 +426,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `age`, `number`, `email`, `address`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 20, '085731013100', 'khansakhalda1604@gmail.com', 'Kediri', '2025-05-02 22:26:35', '$2y$12$abn/VO2IphgNW8C2snpCq.V/lTZ.p7MXClnPEAczs3uUgnLpZcxDC', 'MnLNk6F23AY39sEwTFjuk2df7gDwzuwAkUliTYE8v9VfsrtPuRTVhj1Ybdky', '2025-05-02 22:26:35', '2025-05-02 22:26:35'),
-(2, 'user', 20, '085731013101', 'khansa.khalda@mhs.unsoed.ac.id', 'Kediri', '2025-05-02 22:26:35', '$2y$12$/B5HRqhlyY6HX6OT4lFaN.QXgGVWcIvBIZcbhXn2bLjphUECUB5cO', '8TIK9RGmgghQWwjSKqj6PH222q1cu60vs86OwtzI1VH0m8zZx1gAnLnY58D8', '2025-05-02 22:26:35', '2025-05-02 22:26:35');
+(1, 'admin', 20, '085731013100', 'khansakhalda1604@gmail.com', 'Kediri', '2025-05-20 07:21:04', '$2y$12$moAn9/kQWNl9pg9ml9XtR.gqxRIVesLnB6Bbjf2yR21lGCVdy6dHy', 'Aoq93odhEVVfY6IOzuwUMiih7prg3c3GO4qxmHE2iy39v8UZuBJivzdM1Br3', '2025-05-20 07:21:04', '2025-05-20 07:21:04'),
+(2, 'user', 20, '085731013101', 'khansa.khalda@mhs.unsoed.ac.id', 'Kediri', '2025-05-20 07:21:04', '$2y$12$5CSwp8GYf.Ae4ljBQBJMquy7jigJ3DwnDg1Umbmcv1RgkfoGdWate', '3dGljCnmEc', '2025-05-20 07:21:05', '2025-05-20 07:21:05');
 
 --
 -- Indexes for dumped tables
@@ -595,7 +594,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `rules`
 --
 ALTER TABLE `rules`
-  MODIFY `kode_pengetahuan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `kode_pengetahuan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

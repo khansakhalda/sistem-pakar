@@ -2,25 +2,25 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\Factories\HasFactory; // Untuk membuat factory user (seeding/testing)
+use Illuminate\Database\Eloquent\Relations\BelongsTo; // Digunakan untuk mendeklarasikan relasi BelongsTo
+use Illuminate\Foundation\Auth\User as Authenticatable; // Inherit fitur autentikasi bawaan Laravel
+use Illuminate\Notifications\Notifiable;  // Untuk fitur notifikasi
+use Spatie\Permission\Traits\HasRoles; // Trait dari Spatie untuk manajemen role/permission
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasRoles;
+    use HasFactory, Notifiable, HasRoles; // Gunakan trait untuk factory, notifikasi, dan peran/izin (Spatie)
 
     /**
-     * The attributes that are mass assignable.
+     * Kolom yang dapat diisi secara massal (fillable).
+     * Digunakan untuk proteksi Mass Assignment.
      *
      * @var array<int, string>
      */
-    // public $incrementing = false;
+
     protected $fillable = [
-        'name',
+        'name', 
         'age',
         'number',
         'email',
@@ -29,17 +29,19 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Kolom yang disembunyikan saat model dikonversi ke array atau JSON.
      *
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', // Password disembunyikan
+        'remember_token', // Token sesi login juga disembunyikan
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * Casting atribut ke tipe data tertentu.
+     * 'email_verified_at' dikonversi ke tipe datetime,
+     * 'password' akan otomatis di-hash (jika menggunakan Laravel 10+).
      *
      * @return array<string, string>
      */
@@ -50,6 +52,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Relasi ke model Diagnosis.
+     * Relasi ini menyatakan bahwa user "dimiliki oleh" diagnosis.
+     * Namun secara logika ini **kurang tepat**.
+     * Seharusnya: `hasMany` karena satu user bisa punya banyak diagnosis.
+     */
     public function diagnosis(): BelongsTo
     {
         return $this->belongsTo(Diagnosis::class, 'kode_pengguna', 'id');
