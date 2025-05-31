@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth; // Untuk cek user login
 use Dompdf\Dompdf; // DomPDF untuk cetak PDF
 use Dompdf\Options;
 use Illuminate\Support\Facades\Http; // Untuk kirim request ke Fonnte (WhatsApp)
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
 class DiagnosisController extends Controller
 {
@@ -104,18 +106,29 @@ class DiagnosisController extends Controller
      * Menampilkan hasil diagnosis berdasarkan ID.
      */
     public function show(string $id)
-    {
-        $data = $this->service->find($id);
-        if ($data) {
-            // Tampilkan hanya jika user adalah admin atau pemilik data
-            if (Auth::user()->roles[0]->name == 'admin' || $data['data']->kode_pengguna == Auth::user()->id) {
-                return view('User.Diagnosis.hasil', $data);
-            }
-        }
+{
+    $data = $this->service->find($id);
 
-        // Jika tidak sesuai, arahkan ke halaman riwayat
-        return view('User.Diagnosis.riwayat', $this->service->getAll());
+    if ($data) {
+        $currentUser = Auth::user();
+
+        // Admin atau pemilik data
+        if (
+            $currentUser->hasRole('admin') ||
+            $data['data']->kode_pengguna == $currentUser->id ||
+            (
+                $currentUser->hasRole('pakar') &&
+                in_array($data['data']->user->getRoleNames()->first(), ['admin', 'user'])
+            )
+        ) {
+            return view('User.Diagnosis.hasil', $data);
+        }
     }
+
+    // Jika tidak berhak melihat
+    return redirect()->route('riwayat-diagnosis')->with('error', 'Anda tidak memiliki akses ke hasil diagnosis ini.');
+}
+
 
     /**
      * Mencetak hasil diagnosis menjadi file PDF.
@@ -165,11 +178,43 @@ class DiagnosisController extends Controller
     /**
      * Menampilkan seluruh riwayat diagnosis milik user.
      */
-    public function History()
-    {
-        $data = $this->service->getAll(); // Ambil semua riwayat
-        return view('User.Diagnosis.riwayat', $data);
+    public function history()
+{
+    $user = auth()->user();
+
+    if ($user->hasRole('pakar')) {
+        $diagnosis = Diagnosis::whereHas('user.roles', function ($q) {
+            $q->whereIn('name', ['user', 'admin']);
+        })->latest()->get();
+    
+        // Buat chart diagnosis per penyakit
+        $chart = $diagnosis->groupBy(fn ($item) => $item->desease->nama_penyakit)
+            ->map(fn ($items) => number_format(($items->count() * 100) / max(1, $diagnosis->count()), 2));
+    }    
+    elseif ($user->hasRole('admin')) {
+        $diagnosis = Diagnosis::where(function ($q) use ($user) {
+            $q->where('kode_pengguna', $user->id)
+              ->orWhereHas('user.roles', function ($r) {
+                  $r->where('name', 'user');
+              });
+        })->latest()->get();
+
+        // Buat data chart: hitung jumlah diagnosis per penyakit
+        $chart = $diagnosis->groupBy(fn ($item) => $item->desease->nama_penyakit)
+    ->map(fn ($items) => number_format(($items->count() * 100) / max(1, $diagnosis->count()), 2));
     }
+    else {
+        $diagnosis = Diagnosis::where('kode_pengguna', $user->id)->latest()->get();
+        $chart = collect(); // Kosongkan untuk user
+    }
+
+    return view('User.Diagnosis.riwayat', [
+        'pageTitle' => 'Riwayat Diagnosis',
+        'breadcrumb' => [['label' => 'Beranda'], ['label' => 'Riwayat Pemeriksaan']],
+        'diagnosis' => $diagnosis,
+        'chart' => $chart
+    ]);
+}
 
     /**
      * Menghapus satu data diagnosis berdasarkan ID.

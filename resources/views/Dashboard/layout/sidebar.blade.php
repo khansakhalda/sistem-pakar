@@ -68,38 +68,49 @@ function selected($url)
                 @role('admin')
                     <li>
                         <a href="{{ route('data-admin.index') }}" class="dropdown-toggle no-arrow {{ selected('data-admin') }}">
-                            <span class="micon bi bi-people-fill"></span><span class="mtext">Data Pengguna</span>
+                            <span class="micon bi bi-people-fill"></span><span class="mtext">Pengguna</span>
                         </a>
                     </li>
 
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon bi bi-clipboard2-pulse-fill"></span><span class="mtext">Data Konsultasi</span>
+                            <span class="micon bi bi-clipboard2-pulse-fill"></span><span class="mtext">Konsultasi</span>
                         </a>
                         <ul class="submenu">
                             <li><a class="{{ selected('diagnosis') }}" href="{{ route('diagnosis.index') }}">Tambah Konsultasi</a></li>
                             <li><a class="{{ selected('riwayat-diagnosis') }}" href="{{ route('riwayat-diagnosis') }}">Riwayat Konsultasi</a></li>
                         </ul>
                     </li>
-
-                    <li>
-                        <a href="{{ url('dashboard/penyakit') }}" class="dropdown-toggle no-arrow {{ selected('penyakit') }}">
-                            <span class="micon bi bi-bug-fill"></span><span class="mtext">Penyakit</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ url('dashboard/gejala') }}" class="dropdown-toggle no-arrow {{ selected('gejala') }}">
-                            <span class="micon bi bi-heart-pulse-fill"></span><span class="mtext">Gejala</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ url('dashboard/pengetahuan') }}" class="dropdown-toggle no-arrow {{ selected('pengetahuan') }}">
-                            <span class="micon bi bi-diagram-3-fill"></span><span class="mtext">Pengetahuan</span>
-                        </a>
-                    </li>
                 @endrole
+                
+                @role('pakar')
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon bi bi-clipboard2-pulse-fill"></span><span class="mtext">Konsultasi</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a class="{{ selected('riwayat-diagnosis') }}" href="{{ route('riwayat-diagnosis') }}">Riwayat Konsultasi</a></li>
+                    </ul>
+                </li>
+
+    <li>
+        <a href="{{ url('dashboard/penyakit') }}" class="dropdown-toggle no-arrow {{ selected('penyakit') }}">
+            <span class="micon bi bi-bug-fill"></span><span class="mtext">Penyakit</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url('dashboard/gejala') }}" class="dropdown-toggle no-arrow {{ selected('gejala') }}">
+            <span class="micon bi bi-heart-pulse-fill"></span><span class="mtext">Gejala</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url('dashboard/pengetahuan') }}" class="dropdown-toggle no-arrow {{ selected('pengetahuan') }}">
+            <span class="micon bi bi-diagram-3-fill"></span><span class="mtext">Pengetahuan</span>
+        </a>
+    </li>
+@endrole
 
                 @guest
                     <li>

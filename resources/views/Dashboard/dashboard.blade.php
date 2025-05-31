@@ -15,7 +15,7 @@
     </style>
 
     <div class="xs-pd-20-10 pd-ltr-20">
-        @role('admin')
+        @role('pakar')
             <div class="pb-10 row" style="margin-top: -1.2em">
                 <div class="mb-1 col-xl-4 col-lg-4 col-md-6">
                     <div class="card-box height-100-p widget-style3">

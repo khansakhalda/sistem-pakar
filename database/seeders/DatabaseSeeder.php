@@ -26,13 +26,14 @@ class DatabaseSeeder extends Seeder
         //Role Creation
         Role::firstOrCreate(['name' => 'admin']);
         Role::firstOrCreate(['name' => 'user']);
+        Role::firstOrCreate(['name' => 'pakar']);
 
         $admin = User::firstOrCreate([
             'name' => 'admin',
             'age' => '20',
             'number' => '085731013100',
             'email' => 'khansakhalda1604@gmail.com',
-            'address' => 'Kediri',
+            'address' => 'Purwokerto',
             'email_verified_at' => now(),
             'password' => Hash::make('adminkhansa1'),
             'remember_token' => Str::random(10),
@@ -43,19 +44,36 @@ class DatabaseSeeder extends Seeder
             'age' => '20',
             'number' => '085731013101',
             'email' => 'khansa.khalda@mhs.unsoed.ac.id',
-            'address' => 'Kediri',
+            'address' => 'Purbalingga',
             'email_verified_at' => now(),
             'password' => Hash::make('userkhansa1'),
             'remember_token' => Str::random(10),
         ]);
 
+        // Pakar user
+        $pakar = User::firstOrCreate([
+            'name' => 'pakar',
+            'age' => '30',
+            'number' => '081234567890',
+            'email' => 'luvulybee@gmail.com',
+            'address' => 'Yogyakarta',
+            'email_verified_at' => now(),
+            'password' => Hash::make('pakarkhansa1'),
+            'remember_token' => Str::random(10),
+        ]);
+
         // Register Role  & Permission to Users
         if (!$admin->hasRole('admin')) {
-    $admin->assignRole('admin');
-}
-if (!$user->hasRole('user')) {
-    $user->assignRole('user');
-}
+        $admin->assignRole('admin');
+        }
+
+        if (!$user->hasRole('user')) {
+        $user->assignRole('user');
+        }
+
+        if (!$pakar->hasRole('pakar')) {
+            $pakar->assignRole('pakar');
+        }
 
         Desease::create([
     'nama_penyakit' => 'Demam Berdarah Dengue (DBD)',

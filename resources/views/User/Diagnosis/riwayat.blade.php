@@ -52,12 +52,13 @@
                         <th>Hasil Diagnosis</th>
                         <th>Tingkat Keyakinan</th>
                         <th>Detail</th>
+                        @role('admin')
                         <th>Hapus</th>
+                        @endrole
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $diagnosis)
-                        @if ($diagnosis->kode_pengguna == Auth::user()->id || Auth::user()->hasRole('admin'))
+                    @foreach ($diagnosis as $diagnosis)
                         <tr>
                             <td>{{ $i }}</td>
                             <td>{{ substr($diagnosis->created_at, 0, 10) }}</td>
@@ -71,44 +72,47 @@
                                     <i class="bi bi-eye-fill"></i>
                                 </a>
                             </td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger rounded" data-bs-toggle="modal" data-bs-target="#hapusModal{{ $diagnosis->diagnosis_id }}">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                                <!-- Modal per item -->
-                                <div class="modal fade" id="hapusModal{{ $diagnosis->diagnosis_id }}" tabindex="-1" aria-labelledby="labelHapus{{ $diagnosis->diagnosis_id }}" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header" style="background-color: #007bff; color: #ffffff;">
-                                                <h5 class="modal-title fw-bold text-white" id="labelHapus{{ $diagnosis->diagnosis_id }}">Konfirmasi Penghapusan</h5>
-                                                <button type="button" class="btn text-white border-0" data-bs-dismiss="modal" aria-label="Tutup" style="font-size: 1.5rem;"><i class="bi bi-x-lg"></i></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Yakin ingin menghapus <strong>riwayat diagnosis ini?</strong><br>
-                                                <span class="text-muted">Tindakan ini tidak dapat dibatalkan.</span>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                <form method="POST" action="{{ route('diagnosis.destroy', $diagnosis->diagnosis_id) }}">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">Ya, Hapus</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
+                            @role('admin')
+<td>
+    <button type="button" class="btn btn-sm btn-outline-danger rounded" data-bs-toggle="modal" data-bs-target="#hapusModal{{ $diagnosis->diagnosis_id }}">
+        <i class="bi bi-trash"></i>
+    </button>
+
+    <!-- Modal per item -->
+    <div class="modal fade" id="hapusModal{{ $diagnosis->diagnosis_id }}" tabindex="-1" aria-labelledby="labelHapus{{ $diagnosis->diagnosis_id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #007bff; color: #ffffff;">
+                    <h5 class="modal-title fw-bold text-white" id="labelHapus{{ $diagnosis->diagnosis_id }}">Konfirmasi Penghapusan</h5>
+                    <button type="button" class="btn text-white border-0" data-bs-dismiss="modal" aria-label="Tutup" style="font-size: 1.5rem;"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    Yakin ingin menghapus <strong>riwayat diagnosis ini?</strong><br>
+                    <span class="text-muted">Tindakan ini tidak dapat dibatalkan.</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <form method="POST" action="{{ route('diagnosis.destroy', $diagnosis->diagnosis_id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Ya, Hapus</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</td>
+@endrole
+
                         </tr>
                         @php $i++; @endphp
-                        @endif
                     @endforeach
-                </tbody>
+                </tbody>                
             </table>
         </div>
     </div>
 
-    @role('admin')
+    @role('admin|pakar')
     <div class="card-box pd-20 mt-3">
         <h5 class="text-center fw-semibold" style="color: #007bff;">Visualisasi Data Diagnosis</h5>
         <div class="d-flex justify-content-center">
@@ -143,9 +147,11 @@
   </div>
 </div>
 
+@role('admin|pakar')
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
     var chartData = {!! json_encode($chart->toArray()) !!};
     var labels = Object.keys(chartData);
@@ -170,9 +176,7 @@
         options: {
             responsive: true,
             plugins: {
-                legend: {
-                    position: 'left',
-                },
+                legend: { position: 'left' },
                 tooltip: {
                     callbacks: {
                         label: function(tooltipItem) {
@@ -185,4 +189,6 @@
     });
 </script>
 @endpush
+@endrole
+
 @endsection
